@@ -1,0 +1,33 @@
+.secCont {
+  padding: 1rem;
+  display: grid;
+  justify-content: space-evenly;
+  align-items: center;
+  align-self: center;
+  grid-template-columns: 60vw;
+  gap: 2rem;
+  /* background-image: linear-gradient(90deg, #4568dc, #b06ab3); */
+  /* background-image: linear-gradient(90deg, #aa076b, #61045f); */
+  background-image: linear-gradient(
+    89.4deg,
+    rgba(194, 0, 39, 1) 0.8%,
+    rgba(10, 35, 104, 1) 99.4%
+  );
+  /* background- */
+}
+
+.secCont h1 {
+  color: white;
+}
+
+.headCont {
+  display: grid;
+  justify-content: center;
+}
+
+.lanCont {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(5rem, 15rem));
+  justify-content: center;
+  gap: 2rem;
+}

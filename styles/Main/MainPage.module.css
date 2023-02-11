@@ -1,0 +1,40 @@
+.mainCont {
+  display: grid;
+  min-height: 50vh;
+  background-color: white;
+  background-repeat: no-repeat;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  grid-template-columns: 60% 30%;
+  gap: 10%;
+  overflow: hidden;
+}
+
+.profCont {
+  z-index: 1;
+  display: grid;
+  padding-left: 20px;
+  justify-content: left;
+  align-content: center;
+}
+
+.profCont h1 {
+  text-transform: capitalize;
+  /* text-decoration: overline underline; */
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.profCont h2 {
+  font-size: 3rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.profImg {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.bloCont {
+  background-color: rgb(34, 30, 30);
+}

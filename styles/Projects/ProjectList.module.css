@@ -1,0 +1,13 @@
+.pCont {
+  justify-content: center;
+  display: grid;
+  min-width: 100%;
+  /* background-image: url('../../resources/Wave.svg'); */
+}
+
+.plistCont {
+  justify-content: center;
+  display: grid;
+  min-height: 100vh;
+  min-width: 70vw;
+}

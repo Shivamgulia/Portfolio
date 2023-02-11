@@ -1,0 +1,13 @@
+import NavBar from './NavBar';
+import Layout1 from './Layout1';
+
+import classes from '../../../styles/UI/Page1.module.css';
+
+export default function Page1(props) {
+  return (
+    <div className={classes.pg1Cont}>
+      <NavBar />
+      <Layout1>{props.children}</Layout1>
+    </div>
+  );
+}
