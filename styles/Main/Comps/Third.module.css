@@ -1,3 +1,20 @@
 .thirCont {
+  padding: 2rem;
   display: grid;
+  color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  text-decoration: overline underline;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+.banners {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
 }

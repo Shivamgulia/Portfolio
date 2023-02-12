@@ -19,10 +19,10 @@ export default function MainPage() {
           <Image src={Face} alt="Vercel Logo" width={300} height={300} />
         </div>
       </div>
-      <div>
+      <div className={classes.thirdC}>
         <Third />
       </div>
-      <div>
+      <div className={classes.secondC}>
         <Second />
       </div>
     </Page1>

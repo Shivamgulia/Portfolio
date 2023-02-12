@@ -1,0 +1,24 @@
+.icon {
+  z-index: 2;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  display: grid;
+  justify-content: center;
+  background-image: url('https://tinypng.com/images/social/website.jpg');
+  color: black;
+}
+
+.text {
+  position: absolute;
+  display: grid;
+  align-content: center;
+  justify-content: left;
+  padding-left: 10px;
+  border-radius: 0.5rem;
+  z-index: 0;
+  height: 150px;
+  width: 20rem;
+  margin-top: -150px;
+  clip-path: polygon(0 0, 40% 0, 70% 100%, 0 100%);
+  background-color: pink;
+}
