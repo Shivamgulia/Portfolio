@@ -4,7 +4,7 @@
   margin: 0px;
   /* height: 57px; */
   max-height: 70px;
-  width: 100%;
+  width: 100vw;
   background-color: white;
   overflow: hidden;
   justify-content: space-between;

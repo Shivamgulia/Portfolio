@@ -1,11 +1,24 @@
 .pCont {
+  color: white;
   justify-content: center;
   display: grid;
   min-width: 100%;
+  text-align: center;
+  padding-top: 20px;
+  background-image: linear-gradient(
+    109.6deg,
+    rgba(9, 9, 121, 1) 11.2%,
+    rgba(144, 6, 161, 1) 53.7%,
+    rgba(0, 212, 255, 1) 100.2%
+  );
   /* background-image: url('../../resources/Wave.svg'); */
+}
+.pCont > h1 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .plistCont {
+  margin-top: 30px;
   justify-content: center;
   display: grid;
   min-height: 100vh;

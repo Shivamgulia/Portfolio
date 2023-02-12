@@ -8,7 +8,7 @@ import Third from './Comps/Third';
 
 export default function MainPage() {
   return (
-    <Page1>
+    <div>
       <div className={classes.mainCont}>
         <div className={classes.profCont}>
           <h1>Hi! Welcome</h1>
@@ -25,6 +25,6 @@ export default function MainPage() {
       <div className={classes.secondC}>
         <Second />
       </div>
-    </Page1>
+    </div>
   );
 }

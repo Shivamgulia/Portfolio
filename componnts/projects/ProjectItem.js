@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 import classes from '../../styles/Projects/ProjectItem.module.css';
 
-export default function ProjectItem() {
+export default function ProjectItem(props) {
   return (
     <motion.div
       initial={{ opacity: 0.2, x: -100 }}
@@ -11,21 +11,11 @@ export default function ProjectItem() {
     >
       <div className={classes.pitemCont}>
         <div className={classes.information}>
-          <h1>Project item</h1>
-          <p>
-            this is the paragraph. Actually this is a test paragraph this is the
-            paragraph. Actually this is a test paragraph this is the paragraph.
-            Actually this is a test paragraph this is the paragraph. Actually
-            this is a test paragraph this is the paragraph. Actually this is a
-            test paragraph this is the paragraph. Actually this is a test
-            paragraph this is the paragraph. Actually this is a test paragraph
-          </p>
+          <h1>{props.Item.name}</h1>
+          <p>{props.Item.descreption}</p>
         </div>
         <div className={classes.image}>
-          <img
-            src="https://colibriwp.com/blog/wp-content/uploads/2018/07/banner-redimensionat.jpg"
-            alt=""
-          />
+          <img src={props.Item.image.src} alt="" />
         </div>
       </div>
     </motion.div>
