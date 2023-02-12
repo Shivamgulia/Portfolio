@@ -2,6 +2,7 @@ import ProjectIntro from '../../projects/ProjectIntro';
 import Authen from '../../../resources/Authen.jpg';
 import Quotes from '../../../resources/Quotes.jpg';
 import FoodOrder from '../../../resources/FoodOrder.jpg';
+import Green from '../../../resources/Green.jpg';
 import classes from '../../../styles/Main/Comps/Third.module.css';
 
 export default function Third() {
@@ -19,6 +20,9 @@ export default function Third() {
         </div>
         <div>
           <ProjectIntro image={FoodOrder} text="Menu" />
+        </div>
+        <div>
+          <ProjectIntro image={Green} text="Green Rides" />
         </div>
       </div>
     </div>
