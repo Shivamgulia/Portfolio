@@ -8,7 +8,7 @@ export default function MainRes() {
   const Router = useRouter();
   function download() {
     Router.push(
-      'https://drive.google.com/uc?export=download&id=1V0TGs7LRZLGS5Mg3SvrTSbJcy36HWmmn'
+      'https://drive.google.com/uc?export=download&id=18ZknA5TgRDufFMcNszzkJJnvB3jEafd2'
     );
   }
   return (
