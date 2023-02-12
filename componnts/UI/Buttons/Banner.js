@@ -11,7 +11,8 @@ export default function Banner(props) {
           <h1 className={classes.headBan}>{props.name}</h1>
         </span>
         <div className={classes.imag}>
-          <Image src={props.image} width={350} height={200} />
+          {/* <Image src={props.image} width={350} height={200} alt={props.name} /> */}
+          <img src={props.image.src} alt="" />
         </div>
       </button>
     </div>

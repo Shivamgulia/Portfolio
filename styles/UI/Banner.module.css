@@ -98,4 +98,36 @@
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 
   transform: translateY(-60px);
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.imag img {
+  width: 350px;
+  height: 200px;
+}
+
+@media screen and (max-width: 520px) {
+  .banner {
+    height: 200px;
+    width: 350px;
+  }
+
+  .imag img {
+    width: 250px;
+    height: 142px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .banner {
+    height: 100px;
+    width: 200px;
+  }
+  .imag img {
+    width: 150px;
+    height: 85px;
+  }
 }
