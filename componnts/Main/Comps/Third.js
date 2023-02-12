@@ -1,3 +1,5 @@
+import { useRouter } from 'next/router';
+
 import ProjectIntro from '../../projects/ProjectIntro';
 import Authen from '../../../resources/Authen.jpg';
 import Quotes from '../../../resources/Quotes.jpg';
@@ -6,23 +8,43 @@ import Green from '../../../resources/Green.jpg';
 import classes from '../../../styles/Main/Comps/Third.module.css';
 
 export default function Third() {
+  const Router = useRouter();
+  function goToProjects() {
+    Router.push('./projects/');
+  }
   return (
     <div className={classes.thirCont}>
       <div>
-        <h1>Projects</h1>
+        <h1>Projects </h1>
       </div>
       <div className={classes.banners}>
-        <div>
-          <ProjectIntro image={Authen} text="Authentication" />
+        <div
+          onClick={() => {
+            Router.push('./projects/1');
+          }}
+        >
+          <ProjectIntro image={Green} text="Green Rides" />
         </div>
-        <div>
-          <ProjectIntro image={Quotes} text="Quotes" />
-        </div>
-        <div>
+        <div
+          onClick={() => {
+            Router.push('./projects/2');
+          }}
+        >
           <ProjectIntro image={FoodOrder} text="Menu" />
         </div>
-        <div>
-          <ProjectIntro image={Green} text="Green Rides" />
+        <div
+          onClick={() => {
+            Router.push('./projects/4');
+          }}
+        >
+          <ProjectIntro image={Quotes} text="Quotes" />
+        </div>
+        <div
+          onClick={() => {
+            Router.push('./projects/3');
+          }}
+        >
+          <ProjectIntro image={Authen} text="Authentication" />
         </div>
       </div>
     </div>
