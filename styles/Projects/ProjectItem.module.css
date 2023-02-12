@@ -27,7 +27,9 @@
   display: grid;
   justify-content: left;
   grid-template-rows: 30% 70%;
+  gap: 1px;
   padding: 10px;
+  text-overflow: ellipsis;
   overflow: hidden;
 }
 
@@ -49,4 +51,12 @@
 .information > h1 {
   /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
   font-family: 'Courier New', Courier, monospace;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.information > p {
+  display: grid;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
