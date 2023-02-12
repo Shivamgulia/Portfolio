@@ -1,0 +1,17 @@
+.resCont {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.image {
+  display: grid;
+  justify-content: center;
+}
+
+.image > img {
+  width: 100%;
+  height: auto;
+}

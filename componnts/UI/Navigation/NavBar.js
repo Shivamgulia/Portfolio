@@ -35,7 +35,7 @@ export default function NavBar() {
             <Button
               text="Resume"
               function={() => {
-                router.push('/');
+                router.push('/resume');
               }}
             />
           </li>
