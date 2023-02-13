@@ -48,3 +48,16 @@
   align-content: flex-start;
   justify-content: center;
 }
+
+.links {
+  display: grid;
+  grid-column: 1 / 5;
+  justify-content: center;
+}
+
+.links > ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}

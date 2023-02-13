@@ -1,4 +1,6 @@
 import { useRouter } from 'next/router';
+import { motion } from 'framer-motion';
+import Button2 from '../../componnts/UI/Buttons/Button2';
 import Quotes from '../../resources/Quotes.jpg';
 import Authen from '../../resources/Authen.jpg';
 import FoodOrder from '../../resources/FoodOrder.jpg';
@@ -20,6 +22,13 @@ const Projects = [
       {
         id: 2,
         det: 'Implemented QR Scanner in react with qr scan library',
+      },
+    ],
+    links: [
+      {
+        id: 1,
+        des: 'Site Link',
+        link: 'https://tiny.one/shivam',
       },
     ],
   },
@@ -47,6 +56,33 @@ const Projects = [
         det: "Implementation of 3 roles for different users (Student, Guard, Admin) different roles have different accesses (like student can rent cycle, guard can return cycles, admin can add or delete student ,guard accounts and also cycle id's)",
       },
     ],
+    links: [
+      {
+        id: 1,
+        des: 'User Side',
+        link: 'https://tiny.one/foodMenu',
+      },
+      {
+        id: 2,
+        des: 'Restaurant Side',
+        link: 'https://tiny.one/foodorder',
+      },
+      {
+        id: 3,
+        des: 'Git Hub Api Code',
+        link: 'https://tiny.one/springmenu',
+      },
+      {
+        id: 4,
+        des: 'Git Client side Code',
+        link: 'https://tiny.one/reactmenu',
+      },
+      {
+        id: 5,
+        des: 'Git Restaurant side Code',
+        link: 'https://tiny.one/reactorder',
+      },
+    ],
   },
   {
     id: 3,
@@ -62,6 +98,13 @@ const Projects = [
       {
         id: 2,
         det: 'Implemented remember me using browser storage',
+      },
+    ],
+    links: [
+      {
+        id: 1,
+        des: 'Website',
+        link: 'https://tinyurl.com/4z9zrvue',
       },
     ],
   },
@@ -93,6 +136,18 @@ const Projects = [
         det: 'MySql being used as the database',
       },
     ],
+    links: [
+      {
+        id: 1,
+        des: 'Github Repository',
+        link: 'https://tinyurl.com/4fhxz537',
+      },
+      {
+        id: 2,
+        des: 'Wesite Link',
+        link: 'https://tinyurl.com/ycya4tub',
+      },
+    ],
   },
 ];
 
@@ -112,23 +167,42 @@ export default function ProjectDetails() {
   }
   const item = Projects[index - 1];
   return (
-    <div className={classes.detCont}>
-      <div className={classes.webdiv}>
-        <img src={item.image.src} alt="" />
-      </div>
-      <div className={classes.info}>
-        <h1>{item.name}</h1>
-        <p>{item.descreption}</p>
-        <ul>
-          {item.work.map((list) => {
-            return (
-              <li key={list.id}>
-                <p>{list.det}</p>
+    <motion.div
+      initial={{ opacity: 0.2, x: -100 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ delay: 0.2 }}
+    >
+      <div className={classes.detCont}>
+        <div className={classes.webdiv}>
+          <img src={item.image.src} alt="" />
+        </div>
+        <div className={classes.info}>
+          <h1>{item.name}</h1>
+          <p>{item.descreption}</p>
+          <ul>
+            {item.work.map((list) => {
+              return (
+                <li key={list.id}>
+                  <p>{list.det}</p>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+        <div className={classes.links}>
+          <ul>
+            {item.links.map((link) => (
+              <li key={link.id}>
+                {/* <p>{link.des + ' :- ' + link.link}</p> */}
+                <Button2
+                  text={link.des}
+                  method={() => Router.push(link.link)}
+                ></Button2>
               </li>
-            );
-          })}
-        </ul>
+            ))}
+          </ul>
+        </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

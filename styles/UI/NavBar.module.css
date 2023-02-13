@@ -37,7 +37,7 @@
   grid-template-columns: repeat(3, minmax(77px, 10vw));
   grid-template-areas: 'link1 link2 link3';
   justify-content: space-around;
-  gap: 10px;
+  gap: 2rem;
 }
 
 .item2 ul {
