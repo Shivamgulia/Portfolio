@@ -87,7 +87,7 @@
   text-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 
-  z-index: 1;
+  /* z-index: -1; */
 }
 
 .imag {

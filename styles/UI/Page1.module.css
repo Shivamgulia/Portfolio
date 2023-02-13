@@ -3,3 +3,12 @@
   background-size: 100% 100%;
   /* background-image: url('../../resources/Wave.svg'); */
 }
+
+.navbarCont {
+  position: fixed;
+  z-index: 1;
+}
+
+.mainBody {
+  padding-top: 60px;
+}

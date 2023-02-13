@@ -8,10 +8,10 @@
   grid-template-columns: 60% 30%;
   gap: 10%;
   overflow: hidden;
+  z-index: -1;
 }
 
 .profCont {
-  z-index: 1;
   display: grid;
   padding-left: 20px;
   justify-content: left;
