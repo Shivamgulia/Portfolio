@@ -5,6 +5,7 @@
   /* height: 57px; */
   max-height: 70px;
   width: 100vw;
+  z-index: 2;
   background-color: white;
   /* overflow: hidden;   */
   justify-content: space-between;

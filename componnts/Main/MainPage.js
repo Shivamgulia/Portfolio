@@ -15,13 +15,14 @@ export default function MainPage() {
           <h2>I am, Shivam Gulia</h2>
           <h4>
             Currently a third year B.Tech student majoring in Electronics
-            Engineering from Harcourt Butler Technical University. Highly
-            enthusastic about creating and programming solutions for problems. I
-            have completed many projects as an individual and as a part of team.
+            Engineering from Harcourt Butler Technical University.I have
+            completed many projects as an individual and as a part of team.
+            After working on many projects, i have advanced knowledge in
+            React.js, Next.js, Java and Spring Boot. Moreover, i have been
+            responsible for creating a system for cycle services provided to
+            studends to use. Highly enthusastic about creating and programming
+            solutions for problems.
           </h4>
-
-          {/* <h1>Hello</h1> */}
-          {/* <h2>Shivam </h2> */}
         </div>
 
         <div className={classes.profImg}>
