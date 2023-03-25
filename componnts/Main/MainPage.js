@@ -11,7 +11,7 @@ export default function MainPage() {
     <div>
       <div className={classes.mainCont}>
         <div className={classes.profCont}>
-          <h1>Hi! Welcome</h1>
+          {/* <h1>Hi! Welcome</h1> */}
           <h2>I am, Shivam Gulia</h2>
           <h4>
             Currently a third year B.Tech student majoring in Electronics
