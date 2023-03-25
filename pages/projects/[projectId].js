@@ -144,7 +144,7 @@ const Projects = [
       },
       {
         id: 2,
-        des: 'Wesite Link',
+        des: 'Website Link',
         link: 'https://tinyurl.com/ycya4tub',
       },
     ],

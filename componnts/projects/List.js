@@ -133,6 +133,18 @@ export default function List() {
           det: 'MySql being used as the database',
         },
       ],
+      links: [
+        {
+          id: 1,
+          des: 'Github Repository',
+          link: 'https://tinyurl.com/4fhxz537',
+        },
+        {
+          id: 2,
+          des: 'Website Link',
+          link: 'https://tinyurl.com/ycya4tub',
+        },
+      ],
     },
   ];
 }

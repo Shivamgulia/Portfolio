@@ -31,6 +31,10 @@ export default function Second() {
           <ProgBar progress={80} />
         </div>
         <div>
+          <Button2 text="Next JS" />
+          <ProgBar progress={80} />
+        </div>
+        <div>
           <Button2 text="Spring Boot" />
           <ProgBar progress={80} />
         </div>
