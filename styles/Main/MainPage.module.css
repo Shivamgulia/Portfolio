@@ -46,3 +46,23 @@
 .thirdC {
   padding-bottom: 10rem;
 }
+
+.contactme {
+  padding-bottom: 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.contactme h2 {
+  margin: 0;
+}
+
+.contacts {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}

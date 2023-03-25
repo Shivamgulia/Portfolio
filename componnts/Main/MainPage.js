@@ -35,6 +35,13 @@ export default function MainPage() {
       <div className={classes.secondC}>
         <Second />
       </div>
+      <div className={classes.contactme}>
+        <h3>Contact Me : </h3>
+        <div className={classes.contacts}>
+          <h4>Mob : (+91) 8279373573</h4>
+          <h4>Email : Shivam.meert@gmail.com</h4>
+        </div>
+      </div>
     </div>
   );
 }
