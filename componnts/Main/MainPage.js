@@ -13,6 +13,15 @@ export default function MainPage() {
         <div className={classes.profCont}>
           <h1>Hi! Welcome</h1>
           <h2>I am, Shivam Gulia</h2>
+          <h4>
+            Currently a third year B.Tech student majoring in Electronics
+            Engineering from Harcourt Butler Technical University. Highly
+            enthusastic about creating and programming solutions for problems. I
+            have completed many projects as an individual and as a part of team.
+          </h4>
+
+          {/* <h1>Hello</h1> */}
+          {/* <h2>Shivam </h2> */}
         </div>
 
         <div className={classes.profImg}>

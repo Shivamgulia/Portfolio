@@ -22,11 +22,13 @@
   text-transform: capitalize;
   /* text-decoration: overline underline; */
   font-family: 'Times New Roman', Times, serif;
+  z-index: 0;
 }
 
 .profCont h2 {
   font-size: 3rem;
   font-family: Georgia, 'Times New Roman', Times, serif;
+  z-index: 0;
 }
 
 .profImg {
