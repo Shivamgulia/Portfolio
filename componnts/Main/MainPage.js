@@ -21,7 +21,7 @@ export default function MainPage() {
             React.js, Next.js, Java and Spring Boot. Moreover, i have been
             responsible for creating a system for cycle services provided to
             studends to use. Highly enthusastic about creating and programming
-            solutions for problems.
+            solutions for problems. In addition to my experience .......
           </h4>
         </div>
 
