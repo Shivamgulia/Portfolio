@@ -1,0 +1,30 @@
+.rdp {
+  --progressper: 80%;
+}
+
+.barbottom {
+  margin-top: 10px;
+  border-radius: 5px;
+  height: 20px;
+  background-color: black;
+  max-width: 100%;
+  display: flex;
+  font-size: 10px;
+}
+
+.bartop {
+  height: 18px;
+  border-radius: 5px;
+  /* width: var(--progressper); */
+  width: 80%;
+  background-color: white;
+  display: flex;
+  justify-content: right;
+}
+
+.per {
+  margin: 0;
+  align-self: center;
+  padding-right: 10px;
+  color: black;
+}
