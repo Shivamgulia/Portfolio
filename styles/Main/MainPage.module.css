@@ -31,7 +31,8 @@
 .profCont h2 {
   font-size: 3rem;
   /* font-family: Georgia, 'Times New Roman', Times, serif; */
-  font-family: 'Lobster', cursive;
+  /* font-family: 'Lobster', cursive; */
+  font-family: 'Righteous', cursive;
   text-align: center;
   margin: 0;
   z-index: 0;
