@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Page1 from '../UI/Navigation/Page1';
 import Image from 'next/image';
 import Face from '../../resources/Shivam1.png';
@@ -9,6 +10,21 @@ import Third from './Comps/Third';
 export default function MainPage() {
   return (
     <div>
+      <Head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@1,500&display=swap"
+          rel="stylesheet"
+        />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
       <div className={classes.mainCont}>
         <div className={classes.profCont}>
           {/* <h1>Hi! Welcome</h1> */}
