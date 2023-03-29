@@ -39,7 +39,10 @@ export default function MainPage() {
             </p>
             <p>
               I am highly disciplined and persistent with an aim of becoming a
-              Software Developer.
+              Software Developer. I am seeking for an opportunity that will
+              provide me with the environment to practically explore and
+              experience my potential by delivering the best and which will add
+              depth to my skills.
             </p>
           </h4>
         </div>
@@ -55,7 +58,11 @@ export default function MainPage() {
         <Second />
       </div>
       <div className={classes.contactme}>
-        <h3>Contact Me : </h3>
+        <h3>
+          Thank you for visiting.
+          <br />
+          You can reach me at:{' '}
+        </h3>
         <div className={classes.contacts}>
           <h4>Mob : (+91) 8279373573</h4>
           <h4>Email : Shivam.meert@gmail.com</h4>
