@@ -6,6 +6,7 @@ import Authen from '../../resources/Authen.jpg';
 import FoodOrder from '../../resources/FoodOrder.jpg';
 import Green from '../../resources/Green.jpg';
 import classes from '../../styles/Projects/ProjectDetails.module.css';
+import HrefLink from '../../componnts/UI/Buttons/HrefLink';
 
 const Projects = [
   {
@@ -194,10 +195,7 @@ export default function ProjectDetails() {
             {item.links.map((link) => (
               <li key={link.id}>
                 {/* <p>{link.des + ' :- ' + link.link}</p> */}
-                <Button2
-                  text={link.des}
-                  method={() => Router.push(link.link)}
-                ></Button2>
+                <HrefLink text={link.des} link={link.link} />
               </li>
             ))}
           </ul>
