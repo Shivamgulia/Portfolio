@@ -13,7 +13,7 @@ export default function MainPage() {
         <div className={classes.profCont}>
           {/* <h1>Hi! Welcome</h1> */}
           <h2>I am, Shivam Gulia</h2>
-          <h4>
+          {/* <h4>
             Currently a third year B.Tech student majoring in Electronics
             Engineering from Harcourt Butler Technical University.I have
             completed many projects as an individual and as a part of team.
@@ -22,6 +22,25 @@ export default function MainPage() {
             responsible for creating a system for cycle services provided to
             studends to use. Highly enthusastic about creating and programming
             solutions for problems.
+          </h4> */}
+          <h4>
+            <p>
+              I am a third-year B.Tech student at Harcourt Butler Technical
+              University, Kanpur having an excellent grasp over Data Structures
+              and Algorithms with an extensive problem-solving experience and
+              curiosity to learn new Technologies.
+            </p>
+            <p>
+              After working on different projects as a Full Stack Web Developer,
+              I have a very good grasp of ReactJS, NextJS for Front End
+              Development and Spring Boot for Back End Development. I have
+              created RestAPI’s using Spring Boot framework with MySQL as well
+              as MongoDb for database.
+            </p>
+            <p>
+              I am highly disciplined and persistent with an aim of becoming a
+              Software Developer.
+            </p>
           </h4>
         </div>
 
