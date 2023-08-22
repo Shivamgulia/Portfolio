@@ -11,12 +11,12 @@ export default function MainRes() {
     <div className={classes.resCont}>
       <div className={classes.downl}>
         <HrefLink
-          text="Download"
-          link="https://drive.google.com/uc?export=download&id=18ZknA5TgRDufFMcNszzkJJnvB3jEafd2"
+          text='Download'
+          link='https://drive.google.com/uc?export=download&id=1Uu6_DwrCvt8ykVtt_A3yf-XPdnRt5Rw9'
         />
       </div>
       <div className={classes.image}>
-        <img src={Resume.src} alt="" />
+        <img src={Resume.src} alt='' />
       </div>
     </div>
   );

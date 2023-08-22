@@ -4,6 +4,7 @@ import Button2 from '../../componnts/UI/Buttons/Button2';
 import Quotes from '../../resources/Quotes.jpg';
 import Authen from '../../resources/Authen.jpg';
 import FoodOrder from '../../resources/FoodOrder.jpg';
+import SQLGen from '../../resources/SQLGen.jpg';
 import Green from '../../resources/Green.jpg';
 import classes from '../../styles/Projects/ProjectDetails.module.css';
 import HrefLink from '../../componnts/UI/Buttons/HrefLink';
@@ -35,6 +36,34 @@ const Projects = [
   },
   {
     id: 2,
+    name: 'Query Genius',
+    image: SQLGen,
+    descreption:
+      'A sophisticated database metadata management and query generation application designed to enhance database efficiency and streamline query generation processes. This innovative tool simplifies the creation and storage of metadata for SQL tables, enabling seamless query generation based on table descriptions.',
+    work: [
+      {
+        id: 1,
+        det: 'creating metadata based on create Table SQL query',
+      },
+      {
+        id: 2,
+        det: 'Saving thegenerated meta data in vectorstore(chroma)',
+      },
+      {
+        id: 3,
+        det: 'Using Generative AI to create correct SQL statements for the given tables in the vectorstore',
+      },
+    ],
+    links: [
+      {
+        id: 1,
+        des: 'GitHub',
+        link: 'https://github.com/Shivamgulia/SQL-Generator',
+      },
+    ],
+  },
+  {
+    id: 3,
     name: 'Menu',
     image: FoodOrder,
     descreption:
@@ -86,7 +115,7 @@ const Projects = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     name: 'Authentication',
     image: Authen,
     descreption:
@@ -110,7 +139,7 @@ const Projects = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     name: 'Quotes',
     image: Quotes,
     descreption:
@@ -156,7 +185,7 @@ export default function ProjectDetails() {
   const Router = useRouter();
   const { projectId } = Router.query;
   const index = Number(projectId);
-  if (!index || index > 4 || index < 1) {
+  if (!index || index > 5 || index < 1) {
     return (
       <div className={classes.detCont}>
         <div className={classes.webdiv}></div>
@@ -175,7 +204,7 @@ export default function ProjectDetails() {
     >
       <div className={classes.detCont}>
         <div className={classes.webdiv}>
-          <img src={item.image.src} alt="" />
+          <img src={item.image.src} alt='' />
         </div>
         <div className={classes.info}>
           <h1>{item.name}</h1>
