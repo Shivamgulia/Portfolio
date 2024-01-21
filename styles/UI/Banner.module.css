@@ -63,7 +63,8 @@
 }
 
 .banner span {
-  display: none;
+  /* display: none; */
+
   position: relative;
 }
 

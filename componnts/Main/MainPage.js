@@ -11,25 +11,25 @@ export default function MainPage() {
   return (
     <div>
       <Head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel='preconnect' href='https://fonts.googleapis.com' />
+        <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
         <link
-          href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@1,500&display=swap"
-          rel="stylesheet"
+          href='https://fonts.googleapis.com/css2?family=Bitter:ital,wght@1,500&display=swap'
+          rel='stylesheet'
         />
 
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel='preconnect' href='https://fonts.googleapis.com' />
+        <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
         <link
-          href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
-          rel="stylesheet"
+          href='https://fonts.googleapis.com/css2?family=Lobster&display=swap'
+          rel='stylesheet'
         />
 
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel='preconnect' href='https://fonts.googleapis.com' />
+        <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
         <link
-          href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
-          rel="stylesheet"
+          href='https://fonts.googleapis.com/css2?family=Righteous&display=swap'
+          rel='stylesheet'
         />
       </Head>
       <div className={classes.mainCont}>
@@ -48,7 +48,7 @@ export default function MainPage() {
           </h4> */}
           <h4>
             <p>
-              I am a third-year B.Tech student at Harcourt Butler Technical
+              I am a Final year B.Tech student at Harcourt Butler Technical
               University, Kanpur having an excellent grasp over Data Structures
               and Algorithms with an extensive problem-solving experience and
               curiosity to learn new Technologies.
@@ -71,7 +71,7 @@ export default function MainPage() {
         </div>
 
         <div className={classes.profImg}>
-          <Image src={Face} alt="Vercel Logo" width={300} height={300} />
+          <Image src={Face} alt='Vercel Logo' width={300} height={300} />
         </div>
       </div>
       <div className={classes.thirdC}>
