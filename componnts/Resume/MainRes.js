@@ -13,7 +13,8 @@ export default function MainRes() {
         <HrefLink
           text='Download'
           // link='https://drive.google.com/uc?export=download&id=1Uu6_DwrCvt8ykVtt_A3yf-XPdnRt5Rw9'
-          link='https://drive.google.com/uc?export=download&id=1Fp4GTtNUyIjjnxKHVPFdxIlI0uLQucef'
+          // link='https://drive.google.com/uc?export=download&id=1Fp4GTtNUyIjjnxKHVPFdxIlI0uLQucef'
+          link='https://drive.google.com/uc?export=download&id=1Qijh_93HFAj3ts0uPs7sUIKaKJCfgExX'
         />
       </div>
       <div className={classes.image}>
