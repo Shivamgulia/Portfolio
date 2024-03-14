@@ -12,7 +12,8 @@ export default function MainRes() {
       <div className={classes.downl}>
         <HrefLink
           text='Download'
-          link='https://drive.google.com/uc?export=download&id=1Uu6_DwrCvt8ykVtt_A3yf-XPdnRt5Rw9'
+          // link='https://drive.google.com/uc?export=download&id=1Uu6_DwrCvt8ykVtt_A3yf-XPdnRt5Rw9'
+          link='https://drive.google.com/uc?export=download&id=1Fp4GTtNUyIjjnxKHVPFdxIlI0uLQucef'
         />
       </div>
       <div className={classes.image}>
