@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Projects from "@/components/main/Projects";
+import Experience from "@/components/main/Experience";
 
 import Mountain1 from "@/assets/images/mountains/parallax0@2x.png";
 import Mountain2 from "@/assets/images/mountains/parallax1@2x.png";
@@ -40,6 +41,7 @@ export default function Home() {
       </div>
       <div className={styles.restDiv}>
         <Projects />
+        <Experience />
       </div>
     </div>
   );

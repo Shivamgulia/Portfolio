@@ -1,0 +1,17 @@
+.cont {
+  padding: 32px 64px;
+}
+
+.image {
+  width: 70vw;
+  object-fit: contain;
+  height: min-content;
+}
+
+.head {
+  color: black;
+}
+
+.details {
+  color: black;
+}

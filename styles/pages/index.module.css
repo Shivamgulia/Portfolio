@@ -3,6 +3,7 @@
   height: 100vh;
   perspective: 10px;
   overflow-y: auto;
+  overflow-x: hidden;
   background-color: rgb(121 39 25);
 }
 
@@ -17,7 +18,7 @@
 .mountains {
   width: 100vw;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   object-fit: cover;
   bottom: 0;
 }
