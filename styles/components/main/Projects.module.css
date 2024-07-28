@@ -1,0 +1,17 @@
+.projectsDiv {
+  width: 100vw;
+
+  display: grid;
+  place-items: center;
+  grid-template-columns: 30% 70%;
+}
+
+.leftMain {
+  font-size: 40px;
+}
+
+.list {
+  display: grid;
+  place-items: center;
+  gap: 5rem;
+}
