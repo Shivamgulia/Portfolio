@@ -1,51 +1,11 @@
 .wrapper {
   width: 100vw;
   height: 100vh;
-  perspective: 10px;
+
   overflow-y: auto;
   overflow-x: hidden;
-  background-color: rgb(121 39 25);
-}
+  background-color: var(--background);
 
-.imageCont {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  transform-style: preserve-3d;
-  z-index: -1;
-}
-
-.mountains {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  object-fit: cover;
-  bottom: 0;
-}
-
-.mountain1 {
-  transform: translateZ(-20px) scale(3);
-}
-
-.mountain2 {
-  transform: translateZ(-15px) scale(2.5);
-}
-
-.mountain3 {
-  transform: translateZ(-10px) scale(2);
-}
-
-.mountain4 {
-  transform: translateZ(-5px) scale(1.5);
-}
-
-.mountain5 {
-  transform: translateZ(0px) scale(1);
-}
-
-.restDiv {
-  background-color: rgb(121 39 25);
-  z-index: 1;
-  min-height: 100vh;
-  width: 100vw;
+  display: grid;
+  place-items: center;
 }
