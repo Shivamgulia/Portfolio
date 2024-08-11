@@ -82,7 +82,7 @@ export default function Main() {
           // router.push("/?page=3");
           // }}
         >
-          Resume
+          Download Resume
         </a>
       </div>
       {showAbout && <About />}
