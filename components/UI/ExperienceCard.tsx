@@ -57,11 +57,11 @@ function ExperienceCard({ experience }: { experience: any }) {
                   {item.list && (
                     <div className={styles.headingItem}>
                       {item.head}
-                      <ul>
+                      <ul className={styles.descList}>
                         {item.desc.map((desc: string, index: number) => {
                           return (
                             <Fragment key={index}>
-                              <li>{desc}</li>
+                              <li className={styles.descItem}>{desc}</li>
                             </Fragment>
                           );
                         })}
@@ -71,7 +71,7 @@ function ExperienceCard({ experience }: { experience: any }) {
                   {!item.list && (
                     <div className={styles.headingItem}>
                       {item.head}
-                      <div>{item.desc}</div>
+                      <div className={styles.descItem}>{item.desc}</div>
                     </div>
                   )}
                 </Fragment>
