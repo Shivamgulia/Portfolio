@@ -1,8 +1,6 @@
 import React, { Fragment } from "react";
 import Image from "next/image";
 
-import { motion } from "framer-motion";
-
 // images
 import Shivam from "@/assets/images/Shivam1.png";
 // logos
@@ -28,9 +26,9 @@ function About() {
   return (
     <div className={`${styles.cont}`}>
       <div className={styles.left}>
-        <motion.div className={styles.imageDiv}>
+        <div className={styles.imageDiv}>
           <Image alt="ME" src={Shivam} className={styles.image} />
-        </motion.div>
+        </div>
 
         <div className={styles.logos}>
           <Image
@@ -70,6 +68,12 @@ function About() {
               </Fragment>
             );
           })}
+        </div>
+        <div className={styles.contact}>
+          Contact Details :
+          <div className={styles.email}>
+            Email : <b>Shivam.meert@gmail.com</b>
+          </div>
         </div>
       </div>
     </div>

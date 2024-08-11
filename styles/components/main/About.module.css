@@ -79,12 +79,21 @@
   width: fit-content;
 }
 
+.contact {
+  padding-top: 4vh;
+  font-size: 25px;
+}
+
+.email {
+  font-size: 20px;
+}
+
 @keyframes pop {
   0% {
-    transform: rotateX(-90deg);
+    transform: rotateY(-180deg);
   }
   100% {
-    transform: rotateX(0deg);
+    transform: rotateY(0deg);
   }
 }
 

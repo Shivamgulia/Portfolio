@@ -1,0 +1,27 @@
+.cont {
+  display: flex;
+  height: 80vh;
+  width: fit-content;
+  place-items: center;
+}
+
+.image {
+  max-height: 80vh;
+  width: fit-content;
+}
+
+.prevButton {
+  position: relative;
+  top: 40vh;
+  left: -5vw;
+}
+
+.nextButton {
+  position: relative;
+  top: 40vh;
+  right: -5vw;
+}
+
+.swipperButton {
+  font-size: 60px;
+}
