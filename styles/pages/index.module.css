@@ -9,3 +9,64 @@
   display: grid;
   place-items: center;
 }
+
+.navDiv {
+  position: absolute;
+
+  top: 0;
+  right: 5vw;
+
+  border-radius: 0px 0px 16px 16px;
+
+  border-style: none none solid none;
+}
+
+.homeButton {
+  background-color: var(--secondary);
+  padding: 16px 32px;
+  border-radius: 0px 0px 0px 16px;
+
+  font-size: 20px;
+
+  border: none;
+  border-style: none solid none none;
+
+  transition: all 0.3s;
+}
+
+.expButton {
+  background-color: var(--secondary);
+  padding: 16px 32px;
+
+  font-size: 20px;
+
+  border: none;
+  border-style: none solid none none;
+  transition: all 0.3s;
+}
+
+.resButton {
+  background-color: var(--secondary);
+  padding: 16px 32px;
+  border-radius: 0px 0px 16px 0px;
+
+  font-size: 20px;
+
+  border: none;
+  transition: all 0.3s;
+}
+
+.homeButton:hover {
+  background-color: var(--accent);
+  color: var(--secondary);
+}
+
+.expButton:hover {
+  background-color: var(--accent);
+  color: var(--secondary);
+}
+
+.resButton:hover {
+  background-color: var(--accent);
+  color: var(--secondary);
+}

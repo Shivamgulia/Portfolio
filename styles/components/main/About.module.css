@@ -1,8 +1,10 @@
 .cont {
   width: 80vw;
-  height: 80vh;
+  min-height: 80vh;
   border-radius: 2rem;
   padding: 2rem;
+
+  margin-top: 10vh;
 
   display: grid;
   grid-template-columns: 30% 80%;
@@ -18,21 +20,27 @@
 
 .imageDiv {
   transform: translateY(-10vh);
+  width: 14vw;
+  height: 14vw;
+  border-radius: 7vw;
+  box-shadow: var(--primary) 0px 0px 20px;
 }
 
 .image {
   width: 15vw;
   height: 15vw;
+  margin-left: -0.5vw;
+  margin-top: -0.5vw;
 
-  border-radius: 7.5vw;
-  box-shadow: var(--primary) 0px 8px 20px;
+  /* border-radius: 7.5vw;
+  box-shadow: var(--primary) 0px 8px 20px; */
 
-  animation: pop 1s ease-in;
+  animation: pop 0.5s linear;
 }
 
 .right {
   width: 50vw;
-  height: 80vh;
+  /* height: 80vh; */
 }
 
 .salutation {
@@ -56,6 +64,7 @@
 
 .logos {
   display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
   padding-top: 10vh;
 }
@@ -67,22 +76,10 @@
 
 @keyframes pop {
   0% {
-    transform: translateX(-100px) translateY(-100px);
-  }
-  50% {
-    transform: translateX(-40px) translateY(-10px);
-  }
-  60% {
-    transform: translateX(-40px) translateY(0px);
-  }
-  80% {
-    transform: translateX(-20px) translateY(-40px);
-  }
-  95% {
-    transform: translateX(0px) translateY(-10px);
+    transform: rotateX(-90deg);
   }
   100% {
-    transform: translateX(0) translateY(0);
+    transform: rotateX(0deg);
   }
 }
 
