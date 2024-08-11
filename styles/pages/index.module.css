@@ -32,6 +32,7 @@
   border-style: none solid none none;
 
   transition: all 0.3s;
+  cursor: pointer;
 }
 
 .expButton {
@@ -43,6 +44,8 @@
   border: none;
   border-style: none solid none none;
   transition: all 0.3s;
+
+  cursor: pointer;
 }
 
 .resButton {
@@ -51,6 +54,7 @@
   border-radius: 0px 0px 16px 0px;
 
   font-size: 20px;
+  text-decoration: none;
 
   border: none;
   transition: all 0.3s;

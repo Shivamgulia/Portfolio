@@ -30,11 +30,13 @@ export default function Main() {
       setShowAbout(false);
       setShowExp(true);
       setShowRes(false);
-    } else if (page == "3") {
-      setShowAbout(false);
-      setShowExp(false);
-      setShowRes(true);
-    } else {
+    }
+    // else if (page == "3") {
+    //   setShowAbout(false);
+    //   setShowExp(false);
+    //   setShowRes(true);
+    // }
+    else {
       setShowAbout(true);
       setShowExp(false);
       setShowRes(false);
@@ -66,21 +68,26 @@ export default function Main() {
         >
           Experience
         </button>
-        <button
+        <a
           className={`${styles.resButton} ${styles.hover}`}
-          onClick={() => {
-            setShowAbout(false);
-            setShowExp(false);
-            setShowRes(true);
-            router.push("/?page=3");
-          }}
+          role="button"
+          target="_blank"
+          href={
+            "https://drive.google.com/uc?export=download&id=19eVENQ0P66nB6qrt7MmEQNvul_j8Q20C"
+          }
+          // onClick={() => {
+          // setShowAbout(false);
+          // setShowExp(false);
+          // setShowRes(true);
+          // router.push("/?page=3");
+          // }}
         >
           Resume
-        </button>
+        </a>
       </div>
       {showAbout && <About />}
       {showExp && <Experience />}
-      {showRes && <Resume />}
+      {/* {showRes && <Resume />} */}
     </div>
   );
 }
