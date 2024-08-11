@@ -62,11 +62,16 @@
   font-size: 20px;
 }
 
+.mainText {
+  padding-bottom: 1rem;
+}
+
 .logos {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   padding-top: 10vh;
+  transform: translateY(-5vh) translateX(2vw);
 }
 
 .logoImages {

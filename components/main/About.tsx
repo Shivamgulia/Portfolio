@@ -1,5 +1,7 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Image from "next/image";
+
+import { motion } from "framer-motion";
 
 // images
 import Shivam from "@/assets/images/Shivam1.png";
@@ -15,26 +17,20 @@ import styles from "@/styles/components/main/About.module.css";
 const SALUTATION = `Hello!`;
 const NAME = `I am Shivam Gulia`;
 
-const INTRO =
-  "I’m a passionate software developer with a strong foundation in building dynamic and scalable web applications.  With a keen interest in ReactJS, NextJS (Web Development) , Spring Boot (JAVA Back-End Development) and React Native (Mobile App Development) , I thrive on turning ideas into efficient, user-friendly digital solutions. My journey in software development has equipped me with a diverse set of skills, from front-end design to back-end architecture, and I’m always eager to take on new challenges. Whether it’s coding, problem-solving, or continuous learning, I’m driven by the desire to create impactful software that makes a difference.";
+const INTRO: string[] = [
+  "I’m a passionate software developer with a strong foundation in building dynamic and scalable web applications.",
+  "With a keen interest in ReactJS, NextJS (Web Development) , Spring Boot (JAVA Back-End Development) and React Native (Mobile App Development) , I thrive on turning ideas into efficient, user-friendly digital solutions.",
+  "My journey in software development has equipped me with a diverse set of skills, from front-end design to back-end architecture, and ",
+  "I’m always eager to take on new challenges. Whether it’s coding, problem-solving, or continuous learning, I’m driven by the desire to create impactful software that makes a difference.",
+];
 
 function About() {
   return (
-    <div className={styles.cont}>
+    <div className={`${styles.cont}`}>
       <div className={styles.left}>
-        <div className={styles.imageDiv}>
+        <motion.div className={styles.imageDiv}>
           <Image alt="ME" src={Shivam} className={styles.image} />
-        </div>
-        {/*  TODO find something to put here */}
-        <div className={styles.edu}></div>
-      </div>
-      <div className={styles.right}>
-        <div className={styles.salutation}>
-          <h1 className={styles.hello}>{SALUTATION}</h1>
-          <h2 className={styles.name}>{NAME}</h2>
-        </div>
-
-        <div className={styles.intro}>{INTRO}</div>
+        </motion.div>
 
         <div className={styles.logos}>
           <Image
@@ -58,6 +54,22 @@ function About() {
             src={JSLogo}
             className={styles.logoImages}
           />
+        </div>
+      </div>
+      <div className={styles.right}>
+        <div className={styles.salutation}>
+          <h1 className={styles.hello}>{SALUTATION}</h1>
+          <h2 className={styles.name}>{NAME}</h2>
+        </div>
+
+        <div className={styles.intro}>
+          {INTRO.map((item, index) => {
+            return (
+              <Fragment key={index}>
+                <div className={styles.mainText}>{item}</div>
+              </Fragment>
+            );
+          })}
         </div>
       </div>
     </div>

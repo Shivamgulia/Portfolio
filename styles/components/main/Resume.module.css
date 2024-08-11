@@ -1,0 +1,14 @@
+.cont {
+  width: 80vw;
+  min-height: 80vh;
+  border-radius: 2rem;
+  padding: 2rem;
+
+  margin-top: 10vh;
+
+  display: grid;
+  grid-template-columns: 30% 80%;
+
+  box-shadow: var(--primary) 0px 50px 100px -20px,
+    var(--secondary) 0px 30px 60px -30px;
+}
