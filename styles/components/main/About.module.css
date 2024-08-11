@@ -179,20 +179,10 @@
 }
 
 @media screen and (max-width: 600px) {
-  .cont {
-    grid-template-columns: 76vw;
-  }
-
   .left {
     grid-template-columns: 35vw 35vw;
     grid-template-rows: 20vw;
     gap: 2vw;
-  }
-
-  .imageDiv {
-    width: 29vw;
-    height: 29vw;
-    border-radius: 50%;
   }
 
   .logoImages {
