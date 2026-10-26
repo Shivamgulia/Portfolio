@@ -23,12 +23,15 @@
   right: 0;
   left: 0;
   height: 1px;
-  background: var(--accent);
+  background-color: transparent;
+  background-image: linear-gradient(var(--accent), var(--accent));
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 0% 100%;
   box-shadow: 0 0 0 rgb(155 201 173 / 0%);
   content: "";
-  opacity: 0;
   transition:
-    opacity 260ms ease,
+    background-size 800ms ease,
     box-shadow 260ms ease;
 }
 
@@ -85,9 +88,15 @@
   bottom: 0;
   left: 0;
   width: 1px;
-  background: rgb(155 201 173 / 35%);
+  background-color: rgb(155 201 173 / 35%);
+  background-image: linear-gradient(var(--accent), var(--accent));
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100% 0%;
   content: "";
-  transition: background-color 220ms ease;
+  transition:
+    background-size 800ms ease,
+    box-shadow 800ms ease;
 }
 
 .phase:last-child::after {
@@ -219,8 +228,8 @@
 
 @media (hover: hover) and (pointer: fine) {
   .projectCard:hover::before {
+    background-size: 100% 100%;
     box-shadow: 0 0 12px rgb(155 201 173 / 45%);
-    opacity: 1;
   }
 
   .projectCard:hover .name,
@@ -239,7 +248,7 @@
   }
 
   .phase:hover::after {
-    background-color: var(--accent);
+    background-size: 100% 100%;
   }
 
   .phase:hover::before {
