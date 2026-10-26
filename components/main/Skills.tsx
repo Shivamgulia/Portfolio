@@ -59,23 +59,6 @@ function Skills() {
           </div>
         ))}
       </div>
-      <div className={styles.education}>
-        <span className={styles.eyebrow}>Education</span>
-        <div className={styles.educationDetails}>
-          <div>
-            <h3>Harcourt Butler Technical University</h3>
-            <p>Bachelor of Technology · Electronics Engineering</p>
-            <p className={styles.coursework}>
-              Coursework: Machine Learning, Data Structures
-            </p>
-          </div>
-          <div className={styles.educationMeta}>
-            <span>Kanpur, India</span>
-            <span>July 2020 – June 2024</span>
-            <span>GPA 7.664</span>
-          </div>
-        </div>
-      </div>
     </section>
   );
 }

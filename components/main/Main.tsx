@@ -3,6 +3,7 @@ import React from "react";
 import styles from "@/styles/pages/index.module.css";
 import About from "@/components/main/About";
 import Experience from "@/components/main/Experience";
+import Education from "@/components/main/Education";
 import Projects from "@/components/main/Projects";
 import Skills from "@/components/main/Skills";
 
@@ -22,8 +23,9 @@ export default function Main() {
         </a>
         <nav className={styles.navigation} aria-label="Main navigation">
           <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
           <a href="#skills">Skills</a>
+          <a href="#education">Education</a>
+          <a href="#projects">Projects</a>
           <a className={styles.resumeLink} href={RESUME_URL} target="_blank" rel="noreferrer">
             Resume <span aria-hidden="true">↗</span>
           </a>
@@ -33,8 +35,9 @@ export default function Main() {
       <div className={styles.content}>
         <About />
         <Experience />
-        <Projects />
         <Skills />
+        <Education />
+        <Projects />
         <footer className={styles.footer} id="contact">
           <div>
             <span className={styles.eyebrow}>Have a good one in mind?</span>
