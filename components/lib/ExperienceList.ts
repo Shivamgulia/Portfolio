@@ -71,6 +71,40 @@ export const experienceList: ExperienceEntry[] = [
 
 export const projectsList: ExperienceEntry[] = [
   {
+    name: "BlockchainAgents",
+    title: "Next.js · TypeScript · LangChain · Gemini / OpenAI · Hardhat · ethers · MySQL",
+    description: [
+      {
+        head: "Highlights",
+        list: true,
+        desc: [
+          "Built an AI agent that carries out blockchain actions from plain-English prompts, including checking balances, transferring ETH, deploying tokens and contracts, generating images, and minting NFTs.",
+          "Designed a custom tool-calling framework with a JSON protocol, automatic tool-schema generation from function signatures, a tool registry, and persistent conversation memory.",
+          "Created a Solidity deployment pipeline where an LLM generates contracts, the server compiles them with Hardhat, and the user's MetaMask wallet deploys them through ethers, including ERC-3643-compliant security tokens.",
+          "Added NFT minting with Pinata IPFS storage and AI image generation, plus NextAuth accounts, MySQL, and per-user chat history.",
+          "Shipped through a pull-request-based workflow across 32 commits.",
+        ],
+      },
+    ],
+  },
+  {
+    name: "AgentOnBlockChan",
+    title: "Solidity · Chainlink · Gemini · Geth",
+    description: [
+      {
+        head: "Highlights",
+        list: true,
+        desc: [
+          "Built a smart contract that sends natural-language prompts to Gemini through a Chainlink oracle and acts on the response on-chain.",
+          "Wrote a Chainlink node job spec to decode requests, call the Gemini API, parse JSON responses, and submit fulfillment transactions.",
+          "Implemented request, fulfillment, and cancellation flows with LINK payments and owner-only access control.",
+          "Added on-chain operation history through events.",
+          "Set up a local Geth development network with a Chainlink node and ERC-677 test token for end-to-end testing.",
+        ],
+      },
+    ],
+  },
+  {
     name: "Hostel Management System",
     title: "ReactJS · Spring Boot · MySQL",
     description: [
@@ -78,8 +112,10 @@ export const projectsList: ExperienceEntry[] = [
         head: "Highlights",
         list: true,
         desc: [
-          "Built secure document storage with MIME-type validation and document uploads to AWS S3, mapped through custom database schemas.",
-          "Implemented stateless API security with Spring Security, JWT, and custom authentication filters.",
+          "Built a full-stack hostel management platform with a web app and mobile companion for students and wardens, covering leave requests and approvals, complaints, fee tracking, the mess menu, notices, and maintenance issues.",
+          "Designed around 20 REST API endpoints with JWT authentication, bcrypt password hashing, and parameterized SQL queries to guard against injection.",
+          "Implemented Google sign-in on web and mobile for college-domain accounts, deriving each student’s roll number from their college email.",
+          "Developed role-based interfaces so students can submit and track requests, while wardens review leave, complaints, and maintenance issues, post notices, and manage student lists.",
         ],
       },
     ],

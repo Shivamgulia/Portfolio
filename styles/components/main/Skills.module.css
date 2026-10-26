@@ -52,6 +52,7 @@
 
 .education {
   display: grid;
+  grid-column: 1 / -1;
   grid-template-columns: minmax(180px, 0.7fr) minmax(0, 1.3fr);
   gap: 3rem;
   margin-top: 5rem;
@@ -60,15 +61,18 @@
 }
 
 .educationDetails {
-  display: flex;
+  display: grid;
+  min-width: 0;
+  grid-template-columns: minmax(0, 1fr) auto;
   justify-content: space-between;
   gap: 2rem;
 }
 
 .educationDetails h3 {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.3rem;
+  font-size: clamp(1.35rem, 2.2vw, 1.8rem);
   font-weight: 400;
+  line-height: 1.2;
 }
 
 .educationDetails p,

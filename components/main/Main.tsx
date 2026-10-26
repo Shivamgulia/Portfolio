@@ -12,7 +12,6 @@ const PHONE_NUMBER = "+918279373573";
 const PHONE_LABEL = "+91-8279373573";
 const LINKEDIN_URL = "https://www.linkedin.com/in/shivam-gulia-44a773202/";
 const GITHUB_URL = "https://github.com/Shivamgulia";
-const PORTFOLIO_URL = "https://shivamgulia.vercel.app/";
 
 export default function Main() {
   return (
@@ -53,9 +52,6 @@ export default function Main() {
             </a>
             <a href={GITHUB_URL} target="_blank" rel="noreferrer">
               GitHub <span>View profile ↗</span>
-            </a>
-            <a href={PORTFOLIO_URL} target="_blank" rel="noreferrer">
-              Portfolio <span>shivamgulia.vercel.app ↗</span>
             </a>
           </div>
           <span className={styles.copyright}>© {new Date().getFullYear()} Shivam Gulia</span>

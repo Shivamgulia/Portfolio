@@ -7,6 +7,7 @@ import SpringLogo from "@/assets/images/logos/springbootlogo.png";
 import JavaLogo from "@/assets/images/logos/javalogo.png";
 import JSLogo from "@/assets/images/logos/javascriptlogo.png";
 
+import ExperienceYears from "@/components/main/ExperienceYears";
 import styles from "@/styles/components/main/About.module.css";
 
 const tools = [
@@ -28,9 +29,10 @@ function About() {
           <span>built to matter.</span>
         </h1>
         <p className={styles.summary}>
-          Software engineer with 2+ years of experience building scalable
-          backend services, cloud-native enterprise applications, and secure
-          RESTful architectures with Java, Spring Boot, and AWS.
+          Software engineer with <ExperienceYears /> years of experience since
+          2023, building scalable backend services, cloud-native enterprise
+          applications, and secure RESTful architectures with Java, Spring
+          Boot, and AWS.
         </p>
         <a className={styles.contactLink} href="mailto:shivam.meert@gmail.com">
           Get in touch <span aria-hidden="true">↗</span>
