@@ -15,9 +15,9 @@ function Education() {
         <div>
           <h3>Harcourt Butler Technical University</h3>
           <p>Bachelor of Technology · Electronics Engineering</p>
-          <p className={styles.coursework}>
+          {/* <p className={styles.coursework}>
             Coursework: Machine Learning, Data Structures
-          </p>
+          </p> */}
         </div>
         <div className={styles.meta}>
           <span>Kanpur, India</span>

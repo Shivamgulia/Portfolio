@@ -29,7 +29,9 @@
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: start;
   gap: 2rem;
-  padding-top: 0.2rem;
+  padding: 1rem;
+  border-radius: 14px;
+  transition: background-color 220ms ease;
 }
 
 .details h3 {
@@ -37,6 +39,9 @@
   font-size: clamp(1.35rem, 2.2vw, 1.8rem);
   font-weight: 400;
   line-height: 1.2;
+  transition:
+    color 180ms ease,
+    transform 180ms ease;
 }
 
 .details p,
@@ -45,6 +50,7 @@
   color: var(--muted);
   font-size: 0.84rem;
   line-height: 1.7;
+  transition: transform 180ms ease;
 }
 
 .details .coursework {
@@ -56,6 +62,36 @@
   align-content: start;
   margin-top: 0;
   text-align: right;
+  transition: transform 180ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .details:hover {
+    background: rgb(227 244 235 / 4%);
+    backdrop-filter: blur(12px);
+  }
+
+  .details:hover h3 {
+    color: var(--accent);
+    transform: translateX(3px);
+  }
+
+  .details:hover p {
+    transform: translateX(3px);
+  }
+
+  .details:hover .meta {
+    transform: translateX(-3px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .details,
+  .details h3,
+  .details p,
+  .meta {
+    transition: none;
+  }
 }
 
 @media (max-width: 700px) {

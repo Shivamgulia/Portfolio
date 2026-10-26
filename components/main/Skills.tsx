@@ -53,10 +53,14 @@ function Skills() {
       </div>
       <div className={styles.groups}>
         {skillGroups.map(({ category, skills }) => (
-          <div className={styles.group} key={category}>
+          <section className={styles.group} key={category}>
             <h3>{category}</h3>
-            <p>{skills.join(" · ")}</p>
-          </div>
+            <ul className={styles.skillList}>
+              {skills.map((skill) => (
+                <li key={skill}>{skill}</li>
+              ))}
+            </ul>
+          </section>
         ))}
       </div>
     </section>

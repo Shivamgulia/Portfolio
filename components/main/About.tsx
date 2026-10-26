@@ -22,7 +22,9 @@ function About() {
   return (
     <section className={styles.cont} id="about" aria-labelledby="about-title">
       <div className={styles.intro}>
-        <span className={styles.eyebrow}>Software engineer · Kanpur, India</span>
+        <span className={styles.eyebrow}>
+          Software engineer · Gurugram, India
+        </span>
         <h1 id="about-title">
           Scalable software,
           <br />
@@ -31,8 +33,8 @@ function About() {
         <p className={styles.summary}>
           Software engineer with <ExperienceYears /> years of experience since
           2023, building scalable backend services, cloud-native enterprise
-          applications, and secure RESTful architectures with Java, Spring
-          Boot, and AWS.
+          applications, and secure RESTful architectures with Java, Spring Boot,
+          and AWS.
         </p>
         <a className={styles.contactLink} href="mailto:shivam.meert@gmail.com">
           Get in touch <span aria-hidden="true">↗</span>
