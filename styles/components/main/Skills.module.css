@@ -1,0 +1,121 @@
+.cont {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.7fr) minmax(0, 1.3fr);
+  gap: 3rem;
+  padding: 2rem 0 8rem;
+  scroll-margin-top: 105px;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.heading h2 {
+  margin-top: 1rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3rem, 7vw, 5.4rem);
+  font-weight: 400;
+  letter-spacing: -0.07em;
+}
+
+.groups {
+  display: grid;
+}
+
+.group {
+  display: grid;
+  grid-template-columns: minmax(130px, 0.65fr) minmax(0, 1.35fr);
+  gap: 1rem;
+  padding: 1.35rem 0;
+  border-top: 1px solid rgb(232 240 239 / 15%);
+}
+
+.group:last-child {
+  border-bottom: 1px solid rgb(232 240 239 / 15%);
+}
+
+.group h3 {
+  color: var(--text);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.group p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.education {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.7fr) minmax(0, 1.3fr);
+  gap: 3rem;
+  margin-top: 5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgb(232 240 239 / 15%);
+}
+
+.educationDetails {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.educationDetails h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.educationDetails p,
+.educationMeta {
+  margin-top: 0.55rem;
+  color: var(--muted);
+  font-size: 0.84rem;
+  line-height: 1.7;
+}
+
+.educationDetails .coursework {
+  margin-top: 1.2rem;
+}
+
+.educationMeta {
+  display: grid;
+  align-content: start;
+  flex: 0 0 auto;
+  margin-top: 0;
+  text-align: right;
+}
+
+@media (max-width: 700px) {
+  .cont {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding-bottom: 5rem;
+  }
+
+  .education {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 440px) {
+  .group {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+  }
+
+  .educationDetails {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .educationMeta {
+    text-align: left;
+  }
+}

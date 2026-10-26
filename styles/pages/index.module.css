@@ -1,93 +1,161 @@
 .wrapper {
-  width: 100vw;
   min-height: 100vh;
-
-  overflow-y: auto;
-  overflow-x: hidden;
-  background-color: var(--background);
-
-  display: grid;
-  place-items: center;
+  background:
+    radial-gradient(ellipse at 80% 8%, rgb(45 82 73 / 20%), transparent 34rem),
+    var(--background);
 }
 
 .navDiv {
-  position: absolute;
-
+  position: sticky;
+  z-index: 10;
   top: 0;
-  right: 5vw;
-
-  border-radius: 0px 0px 16px 16px;
-
-  border-style: none none solid none;
+  display: flex;
+  min-height: 76px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 max(7vw, calc((100vw - 1180px) / 2));
+  border-bottom: 1px solid rgb(232 240 239 / 9%);
+  background: rgb(6 12 11 / 88%);
+  backdrop-filter: blur(18px);
 }
 
-.homeButton {
-  background-color: var(--secondary);
-  padding: 16px 32px;
-  border-radius: 0px 0px 0px 16px;
-
-  font-size: 20px;
-
-  border: none;
-  border-style: none solid none none;
-
-  transition: all 0.3s;
-  cursor: pointer;
-}
-
-.expButton {
-  background-color: var(--secondary);
-  padding: 16px 32px;
-
-  font-size: 20px;
-
-  border: none;
-  border-style: none solid none none;
-  transition: all 0.3s;
-
-  cursor: pointer;
-}
-
-.resButton {
-  background-color: var(--secondary);
-  padding: 16px 32px;
-  border-radius: 0px 0px 16px 0px;
-
-  font-size: 20px;
+.wordmark {
+  color: var(--text);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: -0.08em;
   text-decoration: none;
-
-  border: none;
-  transition: all 0.3s;
 }
 
-.homeButton:hover {
-  background-color: var(--accent);
-  color: var(--secondary);
+.wordmark span {
+  color: var(--accent);
 }
 
-.expButton:hover {
-  background-color: var(--accent);
-  color: var(--secondary);
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.2rem, 3vw, 2.8rem);
 }
 
-.resButton:hover {
-  background-color: var(--accent);
-  color: var(--secondary);
+.navigation a,
+.footer a {
+  color: var(--muted);
+  font-size: 0.87rem;
+  text-decoration: none;
+  transition: color 180ms ease;
 }
 
-@media screen and (max-width: 1350px) {
-  .homeButton {
-    font-size: 1rem;
-    padding: 6px 12px;
+.navigation a:hover,
+.footer a:hover {
+  color: var(--accent);
+}
+
+.navigation .resumeLink {
+  color: var(--accent);
+}
+
+.resumeLink span,
+.footer a span {
+  padding-left: 0.25rem;
+}
+
+.content {
+  width: min(1180px, 86vw);
+  margin: 0 auto;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.8fr);
+  align-items: end;
+  gap: 2rem;
+  padding: 7rem 0 2rem;
+  border-top: 1px solid rgb(232 240 239 / 14%);
+}
+
+.footer h2 {
+  margin-top: 0.8rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+}
+
+.contactLinks {
+  display: grid;
+  width: 100%;
+}
+
+.contactLinks a {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid rgb(232 240 239 / 14%);
+  color: var(--text);
+  font-size: 0.84rem;
+}
+
+.contactLinks a:first-child {
+  border-top: 1px solid rgb(232 240 239 / 14%);
+}
+
+.contactLinks a span {
+  color: var(--muted);
+  text-align: right;
+}
+
+.copyright {
+  grid-column: 1 / -1;
+  padding-top: 2rem;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+@media (max-width: 600px) {
+  .navDiv {
+    min-height: 68px;
+    padding: 0 7vw;
   }
 
-  .expButton {
-    font-size: 1rem;
-    padding: 6px 12px;
+  .navigation {
+    gap: 0.8rem;
   }
 
-  .resButton {
-    font-size: 1rem;
-    padding: 6px 12px;
+  .navigation a {
+    font-size: 0.7rem;
+  }
+
+  .wordmark {
+    font-size: 1.45rem;
+  }
+
+  .content {
+    width: 86vw;
+  }
+
+  .footer {
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 1.5rem;
+    padding-top: 5rem;
+  }
+
+  .contactLinks {
+    max-width: 28rem;
+  }
+
+  .copyright {
+    grid-column: auto;
+    padding-top: 1rem;
   }
 }

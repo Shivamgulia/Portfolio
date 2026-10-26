@@ -1,77 +1,58 @@
 .cont {
-  width: 80vw;
-  height: fit-content;
+  padding: 2rem 0 8rem;
+  scroll-margin-top: 105px;
+}
 
-  border-radius: 2rem;
+.sectionHeading {
+  margin-bottom: 4rem;
+}
 
-  margin-top: 10vh;
+.eyebrow {
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
 
+.sectionHeading h2 {
+  margin-top: 1rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3rem, 7vw, 5.4rem);
+  font-weight: 400;
+  letter-spacing: -0.07em;
+}
+
+.experienceList {
   display: grid;
-  grid-template-columns: 30% 80%;
-
-  box-shadow: var(--primary) 0px 50px 100px -20px,
-    var(--secondary) 0px 30px 60px -30px;
+  grid-template-columns: 52px minmax(0, 1fr);
+  column-gap: 1.5rem;
 }
 
-.experienceSwipper {
-  width: 80vw;
-  min-height: 80vh;
+.projectNumber {
+  padding-top: 2.1rem;
+  border-top: 1px solid rgb(232 240 239 / 15%);
+  color: var(--accent);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.9rem;
 }
 
-.prevButton {
-  position: absolute;
-  top: 50vh;
-  left: 1vw;
-}
-
-.prevButton:hover {
-  animation-name: left;
-  animation-iteration-count: infinite;
-  animation-duration: 1s;
-}
-
-.nextButton {
-  position: absolute;
-  top: 50vh;
-  right: 1vw;
-}
-
-.nextButton:hover {
-  animation-name: right;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-}
-
-.swipperButton {
-  font-size: 30px;
-}
-
-.noDisplay {
-  display: none;
-}
-
-@keyframes left {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(-2vw);
-  }
-}
-
-@keyframes right {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(2vw);
-  }
-}
-
-@media screen and (max-width: 800px) {
+@media (max-width: 600px) {
   .cont {
-    padding: 0;
+    padding-bottom: 5rem;
+  }
+
+  .sectionHeading {
+    margin-bottom: 2.5rem;
+  }
+
+  .experienceList {
+    grid-template-columns: 28px minmax(0, 1fr);
+    column-gap: 0.8rem;
+  }
+
+  .projectNumber {
+    padding-top: 1.7rem;
+    font-size: 0.75rem;
   }
 }

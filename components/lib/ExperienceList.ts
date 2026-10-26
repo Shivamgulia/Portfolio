@@ -1,145 +1,157 @@
-// Fil Images
-import Fil1 from "@/assets/images/websites/Fil1.jpg";
-import Fil2 from "@/assets/images/websites/Fil2.jpg";
-import Fil3 from "@/assets/images/websites/Fil3.jpg";
-import Fil4 from "@/assets/images/websites/Fil4.jpg";
+export type ExperienceDescription =
+  | { head: string; list: false; desc: string }
+  | { head: string; list: true; desc: string[] };
 
-// AVo Images
-import Avo1 from "@/assets/images/websites/Avo1.png";
-import Avo2 from "@/assets/images/websites/Avo2.png";
-import Avo3 from "@/assets/images/websites/Avo3.png";
-import Avo4 from "@/assets/images/websites/Avo4.png";
-import Avo5 from "@/assets/images/websites/Avo5.png";
-import Avo6 from "@/assets/images/websites/Avo6.png";
+export type ExperiencePhase = {
+  title: string;
+  period: string;
+  highlights: string[];
+};
 
-// Admin Images
-import Admin1 from "@/assets/images/websites/Admin1.png";
-import Admin2 from "@/assets/images/websites/Admin2.png";
-import Admin3 from "@/assets/images/websites/Admin3.png";
-import Admin4 from "@/assets/images/websites/Admin4.png";
-import Admin5 from "@/assets/images/websites/Admin5.png";
+export type ExperienceEntry = {
+  name: string;
+  title: string;
+  description: ExperienceDescription[];
+  phases?: ExperiencePhase[];
+  links?: { heading: string; link: string }[];
+};
 
-export const experienceList = [
+export const experienceList: ExperienceEntry[] = [
   {
     name: "Fidelity International",
-    title: "AI Intern",
-    description: [
+    title: "Gurugram, India",
+    phases: [
       {
-        head: "Technology:",
-        list: false,
-        desc: "Generative AI, Vector Stores, React JS, Python, Flask",
+        title: "AI Intern",
+        period: "June 2023 – August 2023",
+        highlights: [
+          "Delivered a document Q&A platform using a ReactJS interface, Python APIs, generative AI, and vector-store semantic search; standardized TXT, PDF, and DOCX content and retrieved the top three relevant document chunks to provide contextual answers.",
+        ],
       },
       {
-        head: "Achievements:",
-        list: false,
-        desc: "Collaborated in the creation of a web application leveraging JavaScript, React JS, and Python with Flask for API development. Successfully delivered a project that integrates generative AI, providing valuable insights into its applications, intricacies, and real-world implementation.",
+        title: "Graduate Programmer",
+        period: "August 2024 – August 2025",
+        highlights: [
+          "Built Spring Boot REST services with Hibernate/JPA to integrate third-party APIs, improving insight and administrative workflows by saving 40+ hours each month.",
+          "Designed a data pipeline that creates vector embeddings from 100+ Confluence documents to support an internal Retrieval-Augmented Generation (RAG) AI agent.",
+        ],
       },
       {
-        head: "Web Application:",
-        list: false,
-        desc: "Harnesses the power of a large language model to answer questions based on diverse sources such as documents, websites, and text, which could answer question accurately up to 88%.",
+        title: "SDE1",
+        period: "August 2025 – September 2026",
+        highlights: [
+          "Led backend development of an event-based incident management service using Java and Spring Boot to measure and remediate IaaS compliance across 700+ cloud accounts.",
+          "Built an AI-assisted ticket-routing and real-time notification backend with AWS SQS and Lambda to help prevent response SLA breaches and maintain compliance.",
+        ],
+      },
+      {
+        title: "SDE2",
+        period: "September 2026 – Present",
+        highlights: [
+          // "Designed a data pipeline that creates vector embeddings from 100+ Confluence documents to support an internal Retrieval-Augmented Generation (RAG) AI agent.",
+          // "Built an AI-assisted ticket-routing and real-time notification backend with AWS SQS and Lambda to help prevent response SLA breaches and maintain compliance.",
+        ],
       },
     ],
-    images: [Fil1, Fil2, Fil3, Fil4],
+    description: [
+      {
+        head: "Technology",
+        list: false,
+        desc: "Java, Spring Boot, Hibernate/JPA, REST, AWS (ECS, Lambda, S3, SQS), RAG, vector stores, ReactJS, Python",
+      },
+    ],
     links: [
       {
-        heading: "LinkedIn Profile",
+        heading: "LinkedIn profile",
         link: "https://www.linkedin.com/in/shivam-gulia-44a773202/",
+      },
+    ],
+  },
+];
+
+export const projectsList: ExperienceEntry[] = [
+  {
+    name: "Hostel Management System",
+    title: "ReactJS · Spring Boot · MySQL",
+    description: [
+      {
+        head: "Highlights",
+        list: true,
+        desc: [
+          "Built secure document storage with MIME-type validation and document uploads to AWS S3, mapped through custom database schemas.",
+          "Implemented stateless API security with Spring Security, JWT, and custom authentication filters.",
+        ],
+      },
+    ],
+  },
+  {
+    name: "Cycle Renting Application",
+    title: "ReactJS · Spring Boot · SQL",
+    description: [
+      {
+        head: "Highlights",
+        list: true,
+        desc: [
+          "Implemented JWT authentication and Google sign-up for an application supporting 3,000+ users.",
+          "Built QR scanning, role-based access, and real-time availability tracking for a fleet of 100 cycles.",
+        ],
+      },
+    ],
+  },
+  {
+    name: "SQL Query Generator",
+    title: "Next.js · Generative AI · Chroma",
+    description: [
+      {
+        head: "Highlights",
+        list: true,
+        desc: [
+          "Designed an AI agent workflow with three specialized agents: Context Gatherer, SQL Expert, and SQL Critic.",
+          "Used prompt engineering to generate structurally sound, semantically refined SQL queries.",
+        ],
       },
     ],
   },
   {
     name: "AVO (Avoid Verbal Order)",
-    title: "Freelance Sea Drivez",
+    title: "Next.js · React · JavaScript · MySQL · Ubuntu",
     description: [
       {
-        head: "Technology:",
-        list: false,
-        desc: "Next JS, React JS, JavaScript, MySQL, Ubuntu",
-      },
-      {
-        head: "Achievements:",
+        head: "Highlights",
         list: true,
         desc: [
-          "Engineered a web application utilizing JavaScript, Next JS, and MySQL for seamless API and front-end development.",
-          "Implemented JSON Web Token for back-end authentication Next-Auth for front-end authentication.",
-          "Deployed the web application on a Ubuntu Virtual Private Server and serve the application by configured the Nginx.",
+          "Built a shipboard issue-tracking application with Next.js and MySQL to route issues to the right departments across four ships.",
+          "Implemented JWT back-end authentication and NextAuth front-end authentication.",
+          "Deployed to an Ubuntu VPS and configured Nginx to serve the application.",
         ],
       },
-      {
-        head: "Web Application:",
-        list: false,
-        desc: "A project that keeps track of issues occurring throughout the ships assigning them to the concerned departments maintaining it for 4 ships.",
-      },
     ],
-    images: [Avo1, Avo2, Avo3, Avo4, Avo5, Avo6],
     links: [
       {
-        heading: "AVO Website",
+        heading: "AVO website",
         link: "https://avo.seadrivezconnect.co.in/",
       },
     ],
   },
   {
     name: "Admin Portal",
-    title: "Freelance Sea Drivez",
+    title: "Next.js · React · JavaScript · MySQL · Ubuntu · Nginx",
     description: [
       {
-        head: "Technology:",
-        list: false,
-        desc: "Next JS, React JS, JavaScript, MySQL, Ubuntu, Nginx",
-      },
-      {
-        head: "Achievements:",
+        head: "Highlights",
         list: true,
         desc: [
-          "Constructed an application for the management to visualize the feedback from the customers.",
-          "Created a secure application with role based authentication for admin and user for multiple ships. – Designed a MySQL Database structure to store and retrieve feedback data.",
-          "Presented Graphs for better understanding the feedback.",
-          "Hosted the app on a VPS running Ubuntu and employed Nginx to serve the application.",
+          "Created a feedback management portal to help teams review customer feedback across four cruise ships.",
+          "Designed role-based access and a MySQL data model for multiple ships.",
+          "Added visual feedback summaries and deployed the application to an Ubuntu VPS with Nginx.",
         ],
       },
-      {
-        head: "Web Application:",
-        list: false,
-        desc: "A project that helps to visualize and understand the feedback from the customer for 4 cruise ships. ",
-      },
     ],
-    images: [Admin1, Admin2, Admin3, Admin4, Admin5],
     links: [
       {
-        heading: "Admin Panel Website",
+        heading: "Admin panel website",
         link: "https://admin.seadrivezconnect.co.in/",
       },
     ],
   },
 ];
-
-const desc = `Fidelity International AI Intern
-Gurugram
-June 2023 - August 2023
-◦ Technology: Generative AI, Vector Stores, React JS, Python, Flask
-◦ Achievements: Collaborated in the creation of a web application leveraging JavaScript, React JS, and Python
-with Flask for API development. Successfully delivered a project that integrates generative AI, providing valuable
-insights into its applications, intricacies, and real-world implementation.
-◦ Web Application: Harnesses the power of a large language model to answer questions based on diverse sources such as
-documents, websites, and text, which could answer question accurately up to 88%.
-
-
-
-• Freelance Sea Drivez AVO (Avoid Verbal Order) January 2024 - March 2024
-◦ Technology: Next JS, React JS, JavaScript, MySQL, Ubuntu
-◦ Achievements: – Engineered a web application utilizing JavaScript, Next JS, and MySQL for seamless API and
-front-end development.
-– Implemented JSON Web Token for back-end authentication Next-Auth for front-end authentication.
-– Deployed the web application on a Ubuntu Virtual Private Server and serve the application by configured the Nginx.
-◦ Web Application: A project that keeps track of issues occurring throughout the ships assigning them to the concerned departments maintaining it for 4 ships.
-
-
-• Freelance Sea Drivez Admin Portal April 2024 - June 2024
-◦ Technology: Next JS, React JS, JavaScript, MySQL, Ubuntu, Nginx
-◦ Achievements: – Constructed an application for the management to visualize the feedback from the customers.
-– Created a secure application with role based authentication for admin and user for multiple ships. – Designed a MySQL Database structure to store and retrieve feedback data.
-– Presented Graphs for better understanding the feedback.
-– Hosted the app on a VPS running Ubuntu and employed Nginx to serve the application.
-◦ Web Application: A project that helps to visualize and understand the feedback from the customer for 4 cruise ships.`;

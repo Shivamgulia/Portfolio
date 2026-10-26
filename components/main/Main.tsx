@@ -1,93 +1,66 @@
-"use client";
-
-import React, { useEffect, useState } from "react";
-import Image from "next/image";
-import { useRouter, useSearchParams } from "next/navigation";
-import { Suspense } from "react";
+import React from "react";
 
 import styles from "@/styles/pages/index.module.css";
 import About from "@/components/main/About";
 import Experience from "@/components/main/Experience";
-import Resume from "@/components/main/Resume";
+import Projects from "@/components/main/Projects";
+import Skills from "@/components/main/Skills";
+
+const RESUME_URL =
+  "https://drive.google.com/uc?export=download&id=19eVENQ0P66nB6qrt7MmEQNvul_j8Q20C";
+const PHONE_NUMBER = "+918279373573";
+const PHONE_LABEL = "+91-8279373573";
+const LINKEDIN_URL = "https://www.linkedin.com/in/shivam-gulia-44a773202/";
+const GITHUB_URL = "https://github.com/Shivamgulia";
+const PORTFOLIO_URL = "https://shivamgulia.vercel.app/";
 
 export default function Main() {
-  const [showAbout, setShowAbout] = useState(false);
-  const [showExp, setShowExp] = useState(false);
-  const [showRes, setShowRes] = useState(false);
-
-  const searchParams = useSearchParams();
-
-  const router = useRouter();
-
-  useEffect(() => {
-    const page = searchParams.get("page");
-
-    if (page == "1") {
-      setShowAbout(true);
-      setShowExp(false);
-      setShowRes(false);
-    } else if (page == "2") {
-      setShowAbout(false);
-      setShowExp(true);
-      setShowRes(false);
-    }
-    // else if (page == "3") {
-    //   setShowAbout(false);
-    //   setShowExp(false);
-    //   setShowRes(true);
-    // }
-    else {
-      setShowAbout(true);
-      setShowExp(false);
-      setShowRes(false);
-    }
-  }, []);
-
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.navDiv}>
-        <button
-          className={`${styles.homeButton} ${styles.hover}`}
-          onClick={() => {
-            setShowAbout(true);
-            setShowExp(false);
-            setShowRes(false);
-            router.push("/?page=1");
-          }}
-        >
-          Home
-        </button>
-        <button
-          className={`${styles.expButton} ${styles.hover}`}
-          onClick={() => {
-            setShowAbout(false);
-            setShowExp(true);
-            setShowRes(false);
-            router.push("/?page=2");
-          }}
-        >
-          Experience
-        </button>
-        <a
-          className={`${styles.resButton} ${styles.hover}`}
-          role="button"
-          target="_blank"
-          href={
-            "https://drive.google.com/uc?export=download&id=19eVENQ0P66nB6qrt7MmEQNvul_j8Q20C"
-          }
-          // onClick={() => {
-          // setShowAbout(false);
-          // setShowExp(false);
-          // setShowRes(true);
-          // router.push("/?page=3");
-          // }}
-        >
-          Download Resume
+    <main className={styles.wrapper}>
+      <header className={styles.navDiv}>
+        <a className={styles.wordmark} href="#about" aria-label="Shivam Gulia, home">
+          SG<span>.</span>
         </a>
+        <nav className={styles.navigation} aria-label="Main navigation">
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a className={styles.resumeLink} href={RESUME_URL} target="_blank" rel="noreferrer">
+            Resume <span aria-hidden="true">↗</span>
+          </a>
+        </nav>
+      </header>
+
+      <div className={styles.content}>
+        <About />
+        <Experience />
+        <Projects />
+        <Skills />
+        <footer className={styles.footer} id="contact">
+          <div>
+            <span className={styles.eyebrow}>Have a good one in mind?</span>
+            <h2>Let&apos;s make it happen.</h2>
+          </div>
+          <div className={styles.contactLinks}>
+            <a href="mailto:shivam.meert@gmail.com">
+              Email <span>shivam.meert@gmail.com</span>
+            </a>
+            <a href={`tel:${PHONE_NUMBER}`}>
+              Phone <span>{PHONE_LABEL}</span>
+            </a>
+            <a href={LINKEDIN_URL} target="_blank" rel="noreferrer">
+              LinkedIn <span>View profile ↗</span>
+            </a>
+            <a href={GITHUB_URL} target="_blank" rel="noreferrer">
+              GitHub <span>View profile ↗</span>
+            </a>
+            <a href={PORTFOLIO_URL} target="_blank" rel="noreferrer">
+              Portfolio <span>shivamgulia.vercel.app ↗</span>
+            </a>
+          </div>
+          <span className={styles.copyright}>© {new Date().getFullYear()} Shivam Gulia</span>
+        </footer>
       </div>
-      {showAbout && <About />}
-      {showExp && <Experience />}
-      {/* {showRes && <Resume />} */}
-    </div>
+    </main>
   );
 }

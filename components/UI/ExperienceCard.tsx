@@ -1,100 +1,81 @@
-import React, { Fragment, useState } from "react";
+import React from "react";
 
+import type { ExperienceEntry } from "../lib/ExperienceList";
 import styles from "@/styles/components/UI/ExperienceCard.module.css";
-import Image from "next/image";
-import Modal from "../modal/Modal";
-import ImageSwipper from "./ImageSwipper";
-import Link from "next/link";
 
-function ExperienceCard({ experience }: { experience: any }) {
-  const [isOpen, setIsOpen] = useState<any>(false);
-  const [imageIndex, setImageIndex] = useState<any>(0);
-
-  function showImages({ index }: { index: number }) {
-    console.log(index);
-    setImageIndex(index);
-    setIsOpen(true);
-  }
-
+function ExperienceCard({ experience }: { experience: ExperienceEntry }) {
   return (
-    <>
-      <Modal
-        onClose={() => {
-          setIsOpen(false);
-        }}
-        isOpen={isOpen}
-      >
-        <div>
-          <ImageSwipper images={experience.images} index={imageIndex} />
+    <article className={styles.cont}>
+      <div className={styles.main}>
+        <div className={styles.expHead}>
+          <h3 className={styles.name}>{experience.name}</h3>
+          <p className={styles.title}>{experience.title}</p>
         </div>
-      </Modal>
-      <div className={styles.cont}>
-        <div className={styles.images}>
-          {experience.images.map((image: any, index: number) => {
+
+        {experience.phases && (
+          <ol className={styles.phases}>
+            {experience.phases.map((phase) => (
+              <li className={styles.phase} key={phase.title}>
+                <div className={styles.phaseHeading}>
+                  <h4>{phase.title}</h4>
+                  <span>{phase.period}</span>
+                </div>
+                <ul className={styles.phaseHighlights}>
+                  {phase.highlights.map((highlight) => (
+                    <li key={highlight}>{highlight}</li>
+                  ))}
+                </ul>
+              </li>
+            ))}
+          </ol>
+        )}
+
+        <div className={styles.headingList}>
+          {experience.description.map((item) => {
+            const isHighlights = item.head === "Highlights";
+
             return (
-              <Fragment key={index}>
-                <Image
-                  alt="App Image"
-                  src={image}
-                  className={styles.appImage}
-                  onClick={() => {
-                    showImages({ index });
-                  }}
-                />
-              </Fragment>
+              <div
+                className={`${styles.headingItem} ${isHighlights ? styles.headingItemUnlabeled : ""}`}
+                key={item.head}
+              >
+                {!isHighlights && (
+                  <span className={styles.descriptionHeading}>{item.head}</span>
+                )}
+                {item.list ? (
+                  <ul className={styles.descList}>
+                    {item.desc.map((description) => (
+                      <li className={styles.descItem} key={description}>
+                        {description}
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className={styles.descItem}>{item.desc}</p>
+                )}
+              </div>
             );
           })}
         </div>
-        <div className={styles.main}>
-          <div className={styles.expHead}>
-            <h1 className={styles.name}>{experience.name}</h1>
-            <h3 className={styles.title}>{experience.title}</h3>
+
+        {experience.links && (
+          <div className={styles.links}>
+            <h4 className={styles.linkHead}>Relevant links</h4>
+            {experience.links.map((link) => (
+              <a
+                href={link.link}
+                className={styles.link}
+                key={link.link}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {link.heading} <span aria-hidden="true">↗</span>
+              </a>
+            ))}
           </div>
-          <div className={styles.headingList}>
-            {experience.description.map((item: any, index: number) => {
-              return (
-                <Fragment key={index}>
-                  {item.list && (
-                    <div className={styles.headingItem}>
-                      {item.head}
-                      <ul className={styles.descList}>
-                        {item.desc.map((desc: string, index: number) => {
-                          return (
-                            <Fragment key={index}>
-                              <li className={styles.descItem}>{desc}</li>
-                            </Fragment>
-                          );
-                        })}
-                      </ul>
-                    </div>
-                  )}
-                  {!item.list && (
-                    <div className={styles.headingItem}>
-                      {item.head}
-                      <div className={styles.descItem}>{item.desc}</div>
-                    </div>
-                  )}
-                </Fragment>
-              );
-            })}
-          </div>
-          {experience.links && (
-            <div className={styles.links}>
-              <h3 className={styles.linkHead}>Relevent Links : </h3>
-              {experience.links.map((link: any, index: number) => {
-                return (
-                  <Fragment>
-                    <Link href={link.link} className={styles.link}>
-                      {link.heading}
-                    </Link>
-                  </Fragment>
-                );
-              })}
-            </div>
-          )}
-        </div>
+        )}
       </div>
-    </>
+    </article>
   );
 }
 

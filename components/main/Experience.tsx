@@ -1,5 +1,4 @@
-import React, { Fragment, useState } from "react";
-import { AiOutlineCaretLeft, AiOutlineCaretRight } from "react-icons/ai";
+import React, { Fragment } from "react";
 
 import ExperienceCard from "../UI/ExperienceCard";
 
@@ -8,42 +7,21 @@ import { experienceList } from "../lib/ExperienceList";
 import styles from "@/styles/components/main/Experience.module.css";
 
 function Experience() {
-  const [experienceIndex, setExperienceIndex] = useState(0);
-
-  function nextExperience() {
-    if (experienceIndex < experienceList.length - 1) {
-      setExperienceIndex((prev) => prev + 1);
-    }
-  }
-
-  function prevExperience() {
-    if (experienceIndex > 0) {
-      setExperienceIndex((prev) => prev - 1);
-    }
-  }
   return (
-    <div className={styles.cont}>
-      {experienceIndex > 0 && (
-        <div
-          onClick={prevExperience}
-          className={`${styles.prevButton} ${styles.swipperButton} `}
-        >
-          <AiOutlineCaretLeft />
-        </div>
-      )}
-
-      <div className={styles.experienceSwipper}>
-        <ExperienceCard experience={experienceList[experienceIndex]} />
+    <section className={styles.cont} id="experience" aria-labelledby="experience-title">
+      <div className={styles.sectionHeading}>
+        <span className={styles.eyebrow}>Where I&apos;ve worked</span>
+        <h2 id="experience-title">Experience</h2>
       </div>
-      {experienceIndex < experienceList.length - 1 && (
-        <div
-          onClick={nextExperience}
-          className={`${styles.nextButton} ${styles.swipperButton}`}
-        >
-          <AiOutlineCaretRight />
-        </div>
-      )}
-    </div>
+      <div className={styles.experienceList}>
+        {experienceList.map((experience, index) => (
+          <Fragment key={experience.name}>
+            <span className={styles.projectNumber}>0{index + 1}</span>
+            <ExperienceCard experience={experience} />
+          </Fragment>
+        ))}
+      </div>
+    </section>
   );
 }
 
