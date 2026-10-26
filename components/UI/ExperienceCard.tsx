@@ -6,7 +6,7 @@ import styles from "@/styles/components/UI/ExperienceCard.module.css";
 function ExperienceCard({ experience }: { experience: ExperienceEntry }) {
   return (
     <article
-      className={`${styles.cont} ${experience.phases ? styles.experienceCard : ""}`}
+      className={`${styles.cont} ${experience.phases ? styles.experienceCard : styles.projectCard}`}
     >
       <div className={styles.main}>
         <div className={styles.expHead}>

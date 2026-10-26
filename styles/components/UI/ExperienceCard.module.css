@@ -13,6 +13,25 @@
   border-top-color: rgb(155 201 173 / 45%);
 }
 
+.projectCard {
+  position: relative;
+}
+
+.projectCard::before {
+  position: absolute;
+  top: -1px;
+  right: 0;
+  left: 0;
+  height: 1px;
+  background: var(--accent);
+  box-shadow: 0 0 0 rgb(155 201 173 / 0%);
+  content: "";
+  opacity: 0;
+  transition:
+    opacity 260ms ease,
+    box-shadow 260ms ease;
+}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -30,6 +49,7 @@
   font-weight: 400;
   letter-spacing: -0.055em;
   line-height: 1.1;
+  transition: color 220ms ease;
 }
 
 .title {
@@ -37,6 +57,7 @@
   color: var(--accent);
   font-size: 0.83rem;
   font-weight: 500;
+  transition: color 220ms ease;
 }
 
 .phases {
@@ -166,6 +187,10 @@
   padding-left: 1rem;
 }
 
+.projectCard .descItem {
+  transition: color 220ms ease;
+}
+
 .links {
   display: flex;
   flex-wrap: wrap;
@@ -193,6 +218,21 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
+  .projectCard:hover::before {
+    box-shadow: 0 0 12px rgb(155 201 173 / 45%);
+    opacity: 1;
+  }
+
+  .projectCard:hover .name,
+  .projectCard:hover .descItem {
+    color: var(--text);
+  }
+
+  .projectCard:hover .title {
+    color: var(--accent);
+    filter: brightness(1.2);
+  }
+
   .phase:hover {
     background-color: rgb(227 244 235 / 6%);
     backdrop-filter: blur(14px);
@@ -224,6 +264,10 @@
 
 @media (prefers-reduced-motion: reduce) {
   .experienceCard,
+  .projectCard::before,
+  .projectCard .name,
+  .projectCard .title,
+  .projectCard .descItem,
   .phase,
   .phase::after,
   .phase::before,
