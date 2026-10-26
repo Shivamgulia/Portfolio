@@ -1,6 +1,9 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
 
-import Shivam from "@/assets/images/Shivam1.png";
+import ShivamCutout from "@/assets/images/shivamwithoutbackground.png";
 import ReactLogo from "@/assets/images/logos/reactlogo.png";
 import NextLogo from "@/assets/images/logos/nextjslogo.png";
 import SpringLogo from "@/assets/images/logos/springbootlogo.png";
@@ -19,6 +22,38 @@ const tools = [
 ];
 
 function About() {
+  const [portraitScrollProgress, setPortraitScrollProgress] = useState(0);
+
+  useEffect(() => {
+    const reducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+    let animationFrame = 0;
+
+    if (reducedMotion) {
+      setPortraitScrollProgress(1);
+      return;
+    }
+
+    function updatePortraitFromScroll() {
+      cancelAnimationFrame(animationFrame);
+      animationFrame = requestAnimationFrame(() => {
+        const progress = Math.min(Math.max(window.scrollY / 180, 0), 1);
+        setPortraitScrollProgress(progress);
+      });
+    }
+
+    window.addEventListener("scroll", updatePortraitFromScroll, {
+      passive: true,
+    });
+    updatePortraitFromScroll();
+
+    return () => {
+      window.removeEventListener("scroll", updatePortraitFromScroll);
+      cancelAnimationFrame(animationFrame);
+    };
+  }, []);
+
   return (
     <section className={styles.cont} id="about" aria-labelledby="about-title">
       <div className={styles.intro}>
@@ -44,9 +79,12 @@ function About() {
       <div className={styles.portraitWrap}>
         <Image
           alt="Portrait of Shivam Gulia"
-          src={Shivam}
+          src={ShivamCutout}
           priority
-          className={styles.image}
+          className={styles.portraitCutout}
+          style={{
+            transform: `translateY(${1.5 - portraitScrollProgress * 2.7}rem) scale(${0.94 + portraitScrollProgress * 0.13})`,
+          }}
         />
         <span className={styles.portraitCaption}>Curious by nature</span>
       </div>
