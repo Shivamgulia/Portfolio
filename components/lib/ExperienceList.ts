@@ -122,28 +122,28 @@ export const projectsList: ExperienceEntry[] = [
   },
   {
     name: "Cycle Renting Application",
-    title: "ReactJS · Spring Boot · SQL",
+    title: "ReactJS · Firebase · REST API · reCAPTCHA",
     description: [
       {
         head: "Highlights",
         list: true,
         desc: [
-          "Implemented JWT authentication and Google sign-up for an application supporting 3,000+ users.",
-          "Built QR scanning, role-based access, and real-time availability tracking for a fleet of 100 cycles.",
+          "Built the React front end for a campus cycle-rental system with separate student, guard, and admin roles. Admins can add and remove cycles, guards, and students, and signup is protected with reCAPTCHA.",
+          "Implemented QR-code scanning with a built-in how-to guide and deployed the application on Firebase Hosting.",
         ],
       },
     ],
   },
   {
     name: "SQL Query Generator",
-    title: "Next.js · Generative AI · Chroma",
+    title: "Next.js · LangChain · OpenAI · Chroma",
     description: [
       {
         head: "Highlights",
         list: true,
         desc: [
-          "Designed an AI agent workflow with three specialized agents: Context Gatherer, SQL Expert, and SQL Critic.",
-          "Used prompt engineering to generate structurally sound, semantically refined SQL queries.",
+          "Built a retrieval-augmented text-to-SQL tool that generates structured metadata for each table schema, then embeds and stores it in Chroma.",
+          "At query time, retrieves the three most relevant tables through semantic search and prompts the LLM with that context to return a SQL query and plain-English explanation.",
         ],
       },
     ],
