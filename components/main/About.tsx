@@ -58,7 +58,7 @@ function About() {
     <section className={styles.cont} id="about" aria-labelledby="about-title">
       <div className={styles.intro}>
         <p className={styles.who}>Shivam Gulia</p>
-        <p className={styles.whoSub}>Software engineer, Gurugram India</p>
+        <p className={styles.whoSub}>Software engineer in Gurugram, India</p>
         <h1 id="about-title">
           Backend systems that stay boring in production.
         </h1>
@@ -92,8 +92,8 @@ function About() {
         <p>
           I build event-driven microservices, improve administrative workflows,
           and bring Retrieval-Augmented Generation and generative AI into
-          practical products. My work has supported compliance insights across
-          700+ cloud accounts and helped teams work more efficiently.
+          practical products. My work has supported compliance operations at
+          enterprise cloud scale and helped teams work more efficiently.
         </p>
       </div>
 

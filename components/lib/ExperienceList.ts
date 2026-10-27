@@ -37,19 +37,11 @@ export const experienceList: ExperienceEntry[] = [
         ],
       },
       {
-        title: "SDE1",
-        period: "August 2025 – September 2026",
+        title: "SDE1, promoted to SDE2",
+        period: "August 2025 – Present",
         highlights: [
           "Led backend development of an event-based incident management service using Java and Spring Boot to measure and remediate IaaS compliance across 700+ cloud accounts.",
           "Built an AI-assisted ticket-routing and real-time notification backend with AWS SQS and Lambda to help prevent response SLA breaches and maintain compliance.",
-        ],
-      },
-      {
-        title: "SDE2",
-        period: "September 2026 – Present",
-        highlights: [
-          // "Designed a data pipeline that creates vector embeddings from 100+ Confluence documents to support an internal Retrieval-Augmented Generation (RAG) AI agent.",
-          // "Built an AI-assisted ticket-routing and real-time notification backend with AWS SQS and Lambda to help prevent response SLA breaches and maintain compliance.",
         ],
       },
     ],
@@ -72,7 +64,8 @@ export const experienceList: ExperienceEntry[] = [
 export const projectsList: ExperienceEntry[] = [
   {
     name: "BlockchainAgents",
-    title: "Next.js · TypeScript · LangChain · Gemini / OpenAI · Hardhat · ethers · MySQL",
+    title:
+      "Next.js · TypeScript · LangChain · Gemini / OpenAI · Hardhat · ethers · MySQL",
     description: [
       {
         head: "Highlights",
@@ -82,7 +75,6 @@ export const projectsList: ExperienceEntry[] = [
           "Designed a custom tool-calling framework with a JSON protocol, automatic tool-schema generation from function signatures, a tool registry, and persistent conversation memory.",
           "Created a Solidity deployment pipeline where an LLM generates contracts, the server compiles them with Hardhat, and the user's MetaMask wallet deploys them through ethers, including ERC-3643-compliant security tokens.",
           "Added NFT minting with Pinata IPFS storage and AI image generation, plus NextAuth accounts, MySQL, and per-user chat history.",
-          "Shipped through a pull-request-based workflow across 32 commits.",
         ],
       },
     ],

@@ -11,7 +11,7 @@ function Experience() {
     <section className={styles.cont} id="experience" aria-labelledby="experience-title">
       <div className={styles.sectionHeading}>
         <h2 id="experience-title">Experience</h2>
-        <p className={styles.sectionNote}>Roles listed newest first.</p>
+        <p className={styles.sectionNote}>From first internship to today.</p>
       </div>
       <div className={styles.experienceList}>
         {experienceList.map((experience) => (
