@@ -2,6 +2,19 @@ import styles from "@/styles/components/main/Skills.module.css";
 
 const skillGroups = [
   {
+    category: "AI skills",
+    skills: [
+      "AI Agents",
+      "Tool/Function Calling",
+      "MCP",
+      "Guardrails",
+      "Retrieval-Augmented Generation (RAG)",
+      "LangChain",
+      "Prompt Engineering",
+      "Vector Databases (Chroma, Milvus)",
+    ],
+  },
+  {
     category: "Languages & core",
     skills: [
       "Java",

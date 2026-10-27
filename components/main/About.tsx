@@ -99,7 +99,7 @@ function About() {
         </p>
       </div>
 
-      <div className={styles.toolkit} aria-label="Technologies I work with">
+      {/* <div className={styles.toolkit} aria-label="Technologies I work with">
         <span className={styles.eyebrow}>Tools of the trade</span>
         <div className={styles.logos}>
           {tools.map(({ name, image }) => (
@@ -109,7 +109,7 @@ function About() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }
