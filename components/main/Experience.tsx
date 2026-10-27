@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 
 import ExperienceCard from "../UI/ExperienceCard";
 
@@ -10,15 +10,12 @@ function Experience() {
   return (
     <section className={styles.cont} id="experience" aria-labelledby="experience-title">
       <div className={styles.sectionHeading}>
-        <span className={styles.eyebrow}>Where I&apos;ve worked</span>
         <h2 id="experience-title">Experience</h2>
+        <p className={styles.sectionNote}>Roles listed newest first.</p>
       </div>
       <div className={styles.experienceList}>
-        {experienceList.map((experience, index) => (
-          <Fragment key={experience.name}>
-            <span className={styles.projectNumber}>0{index + 1}</span>
-            <ExperienceCard experience={experience} />
-          </Fragment>
+        {experienceList.map((experience) => (
+          <ExperienceCard experience={experience} key={experience.name} />
         ))}
       </div>
     </section>

@@ -1,40 +1,31 @@
 .cont {
-  padding: 2rem 0 8rem;
-  scroll-margin-top: 105px;
+  padding: 2rem 0 7rem;
+  border-top: 1px solid var(--hairline);
+  scroll-margin-top: 96px;
 }
 
 .sectionHeading {
-  margin-bottom: 4rem;
-}
-
-.eyebrow {
-  color: var(--accent);
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
+  margin-bottom: 3.5rem;
 }
 
 .sectionHeading h2 {
-  margin-top: 1rem;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(3rem, 7vw, 5.4rem);
-  font-weight: 400;
-  letter-spacing: -0.07em;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-weight: 500;
+  font-stretch: 125%;
+  letter-spacing: -0.015em;
+}
+
+.sectionNote {
+  margin-top: 0.6rem;
+  color: var(--annotation);
+  font-size: 0.9rem;
+  line-height: 1.6;
 }
 
 .experienceList {
   display: grid;
-  grid-template-columns: 52px minmax(0, 1fr);
-  column-gap: 1.5rem;
-}
-
-.projectNumber {
-  padding-top: 2.1rem;
-  border-top: 1px solid rgb(232 240 239 / 15%);
-  color: var(--accent);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 0.9rem;
+  grid-template-columns: minmax(0, 1fr);
 }
 
 @media (max-width: 600px) {
@@ -43,16 +34,6 @@
   }
 
   .sectionHeading {
-    margin-bottom: 2.5rem;
-  }
-
-  .experienceList {
-    grid-template-columns: 28px minmax(0, 1fr);
-    column-gap: 0.8rem;
-  }
-
-  .projectNumber {
-    padding-top: 1.7rem;
-    font-size: 0.75rem;
+    margin-bottom: 2.2rem;
   }
 }

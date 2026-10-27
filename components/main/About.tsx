@@ -57,13 +57,10 @@ function About() {
   return (
     <section className={styles.cont} id="about" aria-labelledby="about-title">
       <div className={styles.intro}>
-        <span className={styles.eyebrow}>
-          Software engineer · Gurugram, India
-        </span>
+        <p className={styles.who}>Shivam Gulia</p>
+        <p className={styles.whoSub}>Software engineer, Gurugram India</p>
         <h1 id="about-title">
-          Scalable software,
-          <br />
-          <span>built to matter.</span>
+          Backend systems that stay boring in production.
         </h1>
         <p className={styles.summary}>
           Software engineer with <ExperienceYears /> years of experience since
@@ -72,25 +69,26 @@ function About() {
           and AWS.
         </p>
         <a className={styles.contactLink} href="mailto:shivam.meert@gmail.com">
-          Get in touch <span aria-hidden="true">↗</span>
+          Write to me
         </a>
       </div>
 
       <div className={styles.portraitWrap}>
-        <Image
-          alt="Portrait of Shivam Gulia"
-          src={ShivamCutout}
-          priority
-          className={styles.portraitCutout}
-          style={{
-            transform: `translateY(${1.5 - portraitScrollProgress * 2.7}rem) scale(${0.94 + portraitScrollProgress * 0.13})`,
-          }}
-        />
-        <span className={styles.portraitCaption}>Curious by nature</span>
+        <div className={styles.photo}>
+          <Image
+            alt="Portrait of Shivam Gulia"
+            src={ShivamCutout}
+            priority
+            className={styles.portraitCutout}
+            style={{
+              transform: `translateY(${1.5 - portraitScrollProgress * 2.7}rem) scale(${0.94 + portraitScrollProgress * 0.13})`,
+            }}
+          />
+        </div>
       </div>
+      <span className={styles.portraitCaption}>Curious by nature.</span>
 
       <div className={styles.aboutText}>
-        <span className={styles.eyebrow}>A little about me</span>
         <p>
           I build event-driven microservices, improve administrative workflows,
           and bring Retrieval-Augmented Generation and generative AI into

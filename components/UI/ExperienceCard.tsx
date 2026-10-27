@@ -16,19 +16,26 @@ function ExperienceCard({ experience }: { experience: ExperienceEntry }) {
 
         {experience.phases && (
           <ol className={styles.phases}>
-            {experience.phases.map((phase) => (
-              <li className={styles.phase} key={phase.title}>
-                <div className={styles.phaseHeading}>
-                  <h4>{phase.title}</h4>
-                  <span>{phase.period}</span>
-                </div>
-                <ul className={styles.phaseHighlights}>
-                  {phase.highlights.map((highlight) => (
-                    <li key={highlight}>{highlight}</li>
-                  ))}
-                </ul>
-              </li>
-            ))}
+            {experience.phases.map((phase) => {
+              const isCurrent = /present/i.test(phase.period);
+
+              return (
+                <li
+                  className={`${styles.phase} ${isCurrent ? styles.phaseCurrent : ""}`}
+                  key={phase.title}
+                >
+                  <div className={styles.phaseHeading}>
+                    <h4>{phase.title}</h4>
+                    <span>{phase.period}</span>
+                  </div>
+                  <ul className={styles.phaseHighlights}>
+                    {phase.highlights.map((highlight) => (
+                      <li key={highlight}>{highlight}</li>
+                    ))}
+                  </ul>
+                </li>
+              );
+            })}
           </ol>
         )}
 
@@ -71,7 +78,7 @@ function ExperienceCard({ experience }: { experience: ExperienceEntry }) {
                 target="_blank"
                 rel="noreferrer"
               >
-                {link.heading} <span aria-hidden="true">↗</span>
+                {link.heading}
               </a>
             ))}
           </div>

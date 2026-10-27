@@ -2,25 +2,17 @@
   display: grid;
   grid-template-columns: minmax(180px, 0.7fr) minmax(0, 1.3fr);
   gap: 3rem;
-  padding: 2rem 0 8rem;
-  border-top: 1px solid rgb(232 240 239 / 15%);
-  scroll-margin-top: 105px;
-}
-
-.eyebrow {
-  color: var(--accent);
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
+  padding: 2rem 0 7rem;
+  border-top: 1px solid var(--hairline);
+  scroll-margin-top: 96px;
 }
 
 .heading h2 {
-  margin-top: 1rem;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 400;
-  letter-spacing: -0.07em;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-weight: 500;
+  font-stretch: 125%;
+  letter-spacing: -0.015em;
 }
 
 .details {
@@ -29,28 +21,21 @@
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: start;
   gap: 2rem;
-  padding: 1rem;
-  border-radius: 14px;
-  transition: background-color 220ms ease;
 }
 
 .details h3 {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1.35rem, 2.2vw, 1.8rem);
-  font-weight: 400;
-  line-height: 1.2;
-  transition:
-    color 180ms ease,
-    transform 180ms ease;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: clamp(1.2rem, 2.1vw, 1.5rem);
+  font-weight: 500;
+  line-height: 1.3;
 }
 
 .details p,
 .meta {
   margin-top: 0.55rem;
-  color: var(--muted);
-  font-size: 0.84rem;
+  color: var(--annotation);
+  font-size: 0.88rem;
   line-height: 1.7;
-  transition: transform 180ms ease;
 }
 
 .details .coursework {
@@ -62,36 +47,6 @@
   align-content: start;
   margin-top: 0;
   text-align: right;
-  transition: transform 180ms ease;
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .details:hover {
-    background: rgb(227 244 235 / 4%);
-    backdrop-filter: blur(12px);
-  }
-
-  .details:hover h3 {
-    color: var(--accent);
-    transform: translateX(3px);
-  }
-
-  .details:hover p {
-    transform: translateX(3px);
-  }
-
-  .details:hover .meta {
-    transform: translateX(-3px);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .details,
-  .details h3,
-  .details p,
-  .meta {
-    transition: none;
-  }
 }
 
 @media (max-width: 700px) {

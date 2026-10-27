@@ -61,7 +61,6 @@ function Skills() {
   return (
     <section className={styles.cont} id="skills" aria-labelledby="skills-title">
       <div className={styles.heading}>
-        <span className={styles.eyebrow}>What I work with</span>
         <h2 id="skills-title">Skills</h2>
       </div>
       <div className={styles.groups}>

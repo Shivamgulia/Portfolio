@@ -27,7 +27,7 @@ export default function Main() {
           <a href="#education">Education</a>
           <a href="#projects">Projects</a>
           <a className={styles.resumeLink} href={RESUME_URL} target="_blank" rel="noreferrer">
-            Resume <span aria-hidden="true">↗</span>
+            Resume (PDF)
           </a>
         </nav>
       </header>
@@ -40,24 +40,28 @@ export default function Main() {
         <Projects />
         <footer className={styles.footer} id="contact">
           <div>
-            <span className={styles.eyebrow}>Have a good one in mind?</span>
-            <h2>Let&apos;s make it happen.</h2>
+            <p className={styles.footerNote}>
+              Open to full-time roles and collaborations.
+            </p>
+            <h2>Get in touch.</h2>
           </div>
           <div className={styles.contactLinks}>
-            <a href="mailto:shivam.meert@gmail.com">
+            <a className={styles.contactRow} href="mailto:shivam.meert@gmail.com">
               Email <span>shivam.meert@gmail.com</span>
             </a>
-            <a href={`tel:${PHONE_NUMBER}`}>
+            <a className={styles.contactRow} href={`tel:${PHONE_NUMBER}`}>
               Phone <span>{PHONE_LABEL}</span>
             </a>
-            <a href={LINKEDIN_URL} target="_blank" rel="noreferrer">
-              LinkedIn <span>View profile ↗</span>
+            <a className={styles.contactRow} href={LINKEDIN_URL} target="_blank" rel="noreferrer">
+              LinkedIn <span>linkedin.com/in/shivam-gulia</span>
             </a>
-            <a href={GITHUB_URL} target="_blank" rel="noreferrer">
-              GitHub <span>View profile ↗</span>
+            <a className={styles.contactRow} href={GITHUB_URL} target="_blank" rel="noreferrer">
+              GitHub <span>github.com/Shivamgulia</span>
             </a>
           </div>
-          <span className={styles.copyright}>© {new Date().getFullYear()} Shivam Gulia</span>
+          <span className={styles.copyright}>
+            © {new Date().getFullYear()} Shivam Gulia
+          </span>
         </footer>
       </div>
     </main>

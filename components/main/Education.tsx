@@ -8,16 +8,12 @@ function Education() {
       aria-labelledby="education-title"
     >
       <div className={styles.heading}>
-        <span className={styles.eyebrow}>Education</span>
-        <h2 id="education-title">Academic background</h2>
+        <h2 id="education-title">Education</h2>
       </div>
       <div className={styles.details}>
         <div>
           <h3>Harcourt Butler Technical University</h3>
           <p>Bachelor of Technology · Electronics Engineering</p>
-          {/* <p className={styles.coursework}>
-            Coursework: Machine Learning, Data Structures
-          </p> */}
         </div>
         <div className={styles.meta}>
           <span>Kanpur, India</span>
