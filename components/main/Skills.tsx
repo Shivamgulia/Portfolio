@@ -2,58 +2,44 @@ import styles from "@/styles/components/main/Skills.module.css";
 
 const skillGroups = [
   {
-    category: "AI skills",
-    skills: [
-      "AI Agents",
-      "Tool/Function Calling",
-      "MCP",
-      "Guardrails",
-      "Retrieval-Augmented Generation (RAG)",
-      "LangChain",
-      "Prompt Engineering",
-      "Vector Databases (Chroma, Milvus)",
-    ],
-  },
-  {
-    category: "Languages & core",
+    category: "Backend",
     skills: [
       "Java",
-      "Python",
-      "JavaScript",
-      "TypeScript",
-      "Terraform",
-      "SQL",
-      "Object-oriented design",
-      "Multithreading",
-      "Concurrency",
-    ],
-  },
-  {
-    category: "Frameworks",
-    skills: [
       "Spring Boot",
-      "Spring Framework",
-      "Hibernate / JPA",
-      "RESTful microservices",
-      "ReactJS",
-      "Next.js",
-      "LangChain",
-      "LangGraph",
+      "REST APIs",
+      "Hibernate/JPA",
+      "Microservices",
+      "Multithreading",
     ],
   },
   {
-    category: "Tools & infrastructure",
+    category: "Cloud & DevOps",
     skills: [
-      "Git",
       "AWS (ECS, Lambda, S3, SQS)",
       "Docker",
-      "Maven",
-      "JUnit",
-      "Mockito",
-      "GitHub Actions",
-      "Jenkins",
-      "Vector stores",
+      "Terraform",
+      "CI/CD (GitHub Actions, Jenkins)",
     ],
+  },
+  {
+    category: "AI / GenAI",
+    skills: [
+      "RAG",
+      "LangChain",
+      "LangGraph",
+      "Tool-calling Agents",
+      "MCP",
+      "Vector DBs (Chroma, Milvus)",
+      "Prompt Engineering",
+    ],
+  },
+  {
+    category: "Languages",
+    skills: ["Java", "Python", "TypeScript", "SQL", "Solidity"],
+  },
+  {
+    category: "Frontend",
+    skills: ["React", "Next.js", "Tailwind"],
   },
 ];
 

@@ -5,9 +5,7 @@ import styles from "@/styles/components/UI/ExperienceCard.module.css";
 
 function ExperienceCard({ experience }: { experience: ExperienceEntry }) {
   return (
-    <article
-      className={`${styles.cont} ${experience.phases ? styles.experienceCard : styles.projectCard}`}
-    >
+    <article className={styles.cont}>
       <div className={styles.main}>
         <div className={styles.expHead}>
           <h3 className={styles.name}>{experience.name}</h3>
@@ -16,26 +14,19 @@ function ExperienceCard({ experience }: { experience: ExperienceEntry }) {
 
         {experience.phases && (
           <ol className={styles.phases}>
-            {experience.phases.map((phase) => {
-              const isCurrent = /present/i.test(phase.period);
-
-              return (
-                <li
-                  className={`${styles.phase} ${isCurrent ? styles.phaseCurrent : ""}`}
-                  key={phase.title}
-                >
-                  <div className={styles.phaseHeading}>
-                    <h4>{phase.title}</h4>
-                    <span>{phase.period}</span>
-                  </div>
-                  <ul className={styles.phaseHighlights}>
-                    {phase.highlights.map((highlight) => (
-                      <li key={highlight}>{highlight}</li>
-                    ))}
-                  </ul>
-                </li>
-              );
-            })}
+            {experience.phases.map((phase) => (
+              <li className={styles.phase} key={phase.title}>
+                <div className={styles.phaseHeading}>
+                  <h4>{phase.title}</h4>
+                  <span>{phase.period}</span>
+                </div>
+                <ul className={styles.phaseHighlights}>
+                  {phase.highlights.map((highlight) => (
+                    <li key={highlight}>{highlight}</li>
+                  ))}
+                </ul>
+              </li>
+            ))}
           </ol>
         )}
 

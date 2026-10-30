@@ -6,13 +6,19 @@ import Experience from "@/components/main/Experience";
 import Education from "@/components/main/Education";
 import Projects from "@/components/main/Projects";
 import Skills from "@/components/main/Skills";
+import BeyondCode from "@/components/main/BeyondCode";
+import ThemeToggle from "@/components/UI/ThemeToggle";
 
-const RESUME_URL =
-  "https://drive.google.com/uc?export=download&id=19eVENQ0P66nB6qrt7MmEQNvul_j8Q20C";
-const PHONE_NUMBER = "+918279373573";
-const PHONE_LABEL = "+91-8279373573";
-const LINKEDIN_URL = "https://www.linkedin.com/in/shivam-gulia-44a773202/";
-const GITHUB_URL = "https://github.com/Shivamgulia";
+import {
+  EMAIL,
+  GITHUB_LABEL,
+  GITHUB_URL,
+  LINKEDIN_LABEL,
+  LINKEDIN_URL,
+  PHONE_LABEL,
+  PHONE_NUMBER,
+  RESUME_URL,
+} from "@/components/lib/siteConfig";
 
 export default function Main() {
   return (
@@ -26,9 +32,11 @@ export default function Main() {
           <a href="#skills">Skills</a>
           <a href="#education">Education</a>
           <a href="#projects">Projects</a>
+          <a href="#beyond">Beyond Code</a>
           <a className={styles.resumeLink} href={RESUME_URL} target="_blank" rel="noreferrer">
-            Resume (PDF)
+            Resume
           </a>
+          <ThemeToggle />
         </nav>
       </header>
 
@@ -38,25 +46,29 @@ export default function Main() {
         <Skills />
         <Education />
         <Projects />
+        <BeyondCode />
         <footer className={styles.footer} id="contact">
           <div>
+            <h2>Let&apos;s build something reliable.</h2>
             <p className={styles.footerNote}>
-              Open to full-time roles and collaborations.
+              Open to backend engineer roles — Java/Spring Boot/AWS, with AI if you&apos;ve got it.
             </p>
-            <h2>Get in touch.</h2>
+            <p className={styles.footerLocations}>
+              Gurugram/NCR · Remote India · Open abroad
+            </p>
           </div>
           <div className={styles.contactLinks}>
-            <a className={styles.contactRow} href="mailto:shivam.meert@gmail.com">
-              Email <span>shivam.meert@gmail.com</span>
+            <a className={styles.contactRow} href={`mailto:${EMAIL}`}>
+              Email <span>{EMAIL}</span>
             </a>
             <a className={styles.contactRow} href={`tel:${PHONE_NUMBER}`}>
               Phone <span>{PHONE_LABEL}</span>
             </a>
             <a className={styles.contactRow} href={LINKEDIN_URL} target="_blank" rel="noreferrer">
-              LinkedIn <span>linkedin.com/in/shivam-gulia</span>
+              LinkedIn <span>{LINKEDIN_LABEL}</span>
             </a>
             <a className={styles.contactRow} href={GITHUB_URL} target="_blank" rel="noreferrer">
-              GitHub <span>github.com/Shivamgulia</span>
+              GitHub <span>{GITHUB_LABEL}</span>
             </a>
           </div>
           <span className={styles.copyright}>

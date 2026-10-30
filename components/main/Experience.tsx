@@ -14,8 +14,8 @@ function Experience() {
         <p className={styles.sectionNote}>From first internship to today.</p>
       </div>
       <div className={styles.experienceList}>
-        {experienceList.map((experience) => (
-          <ExperienceCard experience={experience} key={experience.name} />
+        {experienceList.map((experience, index) => (
+          <ExperienceCard experience={experience} key={`${experience.name}-${index}`} />
         ))}
       </div>
     </section>

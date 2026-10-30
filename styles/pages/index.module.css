@@ -1,6 +1,7 @@
 .wrapper {
   min-height: 100vh;
-  background: var(--paper);
+  background: var(--bg);
+  color: var(--ink);
 }
 
 .navDiv {
@@ -8,38 +9,39 @@
   z-index: 10;
   top: 0;
   display: flex;
-  min-height: 68px;
+  min-height: 52px;
   align-items: center;
   justify-content: space-between;
-  padding: 0 max(7vw, calc((100vw - 1120px) / 2));
+  gap: 1.5rem;
+  padding: 0 max(6vw, calc((100vw - 1040px) / 2));
   border-bottom: 1px solid var(--hairline);
-  background: var(--paper);
+  background: var(--glass);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
 }
 
 .wordmark {
   color: var(--ink);
-  font-family: var(--font-sans), system-ui, sans-serif;
-  font-size: 1.2rem;
-  font-weight: 700;
-  font-stretch: 125%;
+  font-size: 1.05rem;
+  font-weight: 600;
   letter-spacing: -0.01em;
   text-decoration: none;
 }
 
 .wordmark span {
-  color: var(--mark);
+  color: var(--muted);
 }
 
 .navigation {
   display: flex;
   align-items: center;
-  gap: clamp(1.2rem, 3vw, 2.4rem);
+  gap: clamp(1rem, 2.5vw, 2rem);
 }
 
 .navigation a,
 .footer a.contactRow {
-  color: var(--annotation);
-  font-size: 0.9rem;
+  color: var(--muted);
+  font-size: 0.85rem;
   text-decoration: none;
   transition: color 160ms ease;
 }
@@ -47,17 +49,25 @@
 .navigation a:hover,
 .footer a.contactRow:hover {
   color: var(--ink);
-  text-decoration: underline;
-  text-underline-offset: 5px;
 }
 
 .navigation .resumeLink {
-  color: var(--ink);
+  padding: 0.48rem 1.1rem;
+  border-radius: var(--radius-pill);
+  background: var(--pill-bg);
+  color: var(--pill-ink);
+  font-size: 0.82rem;
   font-weight: 500;
+  transition: opacity 200ms ease;
+}
+
+.navigation .resumeLink:hover {
+  color: var(--pill-ink);
+  opacity: 0.82;
 }
 
 .content {
-  width: min(1120px, 86vw);
+  width: min(1040px, 86vw);
   margin: 0 auto;
 }
 
@@ -66,24 +76,30 @@
   grid-template-columns: minmax(0, 1fr) minmax(280px, 0.8fr);
   align-items: end;
   gap: 2.5rem;
-  padding: 7rem 0 2.5rem;
+  padding: clamp(5rem, 10vw, 7rem) 0 2.5rem;
   border-top: 1px solid var(--hairline);
 }
 
+.footer h2 {
+  max-width: 12ch;
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  text-wrap: balance;
+}
+
 .footerNote {
-  color: var(--annotation);
-  font-size: 0.9rem;
+  margin-top: 1.2rem;
+  color: var(--muted);
+  font-size: 0.95rem;
   line-height: 1.6;
 }
 
-.footer h2 {
-  margin-top: 0.8rem;
-  font-family: var(--font-sans), system-ui, sans-serif;
-  font-size: clamp(2.2rem, 5vw, 3.8rem);
-  font-weight: 500;
-  font-stretch: 125%;
-  letter-spacing: -0.015em;
-  line-height: 1.05;
+.footerLocations {
+  margin-top: 0.4rem;
+  color: var(--muted);
+  font-size: 0.82rem;
 }
 
 .contactLinks {
@@ -107,49 +123,42 @@
 }
 
 .contactRow span {
-  color: var(--annotation);
+  color: var(--muted);
   text-align: right;
   transition: color 160ms ease;
 }
 
 .contactRow:hover span {
-  color: var(--mark);
+  color: var(--ink);
 }
 
 .copyright {
   grid-column: 1 / -1;
   padding-top: 2rem;
-  color: var(--annotation);
-  font-size: 0.78rem;
+  color: var(--muted);
+  font-size: 0.75rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 820px) {
+  .navigation a:not(.resumeLink) {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
   .navDiv {
-    min-height: 60px;
-    padding: 0 7vw;
-  }
-
-  .navigation {
-    gap: 0.9rem;
-  }
-
-  .navigation a {
-    font-size: 0.72rem;
-  }
-
-  .wordmark {
-    font-size: 1.05rem;
+    padding: 0 4vw;
   }
 
   .content {
-    width: 86vw;
+    width: 88vw;
   }
 
   .footer {
     grid-template-columns: 1fr;
     align-items: start;
-    gap: 1.5rem;
-    padding-top: 5rem;
+    gap: 2rem;
+    padding-top: 4.5rem;
   }
 
   .contactLinks {

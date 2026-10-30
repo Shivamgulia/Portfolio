@@ -1,8 +1,8 @@
 import React from "react";
 
-import ExperienceCard from "../UI/ExperienceCard";
+import ProjectCard from "../UI/ProjectCard";
 import { projectsList } from "../lib/ExperienceList";
-import styles from "@/styles/components/main/Experience.module.css";
+import styles from "@/styles/components/main/Projects.module.css";
 
 function Projects() {
   return (
@@ -11,9 +11,9 @@ function Projects() {
         <h2 id="projects-title">Projects</h2>
         <p className={styles.sectionNote}>Built independently, outside work.</p>
       </div>
-      <div className={styles.experienceList}>
+      <div className={styles.grid}>
         {projectsList.map((project) => (
-          <ExperienceCard experience={project} key={project.name} />
+          <ProjectCard project={project} key={project.name} />
         ))}
       </div>
     </section>
