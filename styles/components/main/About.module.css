@@ -35,6 +35,22 @@
   font-style: italic;
 }
 
+.keywordLine {
+  margin-top: 1.2rem;
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.ctaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem 2.4rem;
+  margin-top: 2rem;
+}
+
 .summary {
   max-width: 32rem;
   margin-top: 2rem;
@@ -129,12 +145,24 @@
   border-top: 1px solid rgb(232 240 239 / 15%);
 }
 
-.aboutText p {
+.aboutBody {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.aboutLead {
   max-width: 58rem;
   color: var(--muted);
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(1.35rem, 2.4vw, 2rem);
   line-height: 1.55;
+}
+
+.aboutBody p:not(.aboutLead) {
+  max-width: 46rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.8;
 }
 
 .toolkit {
@@ -185,7 +213,45 @@
     grid-template-columns: 1fr;
     gap: 1rem;
   }
+
+  .chips {
+    grid-column: auto;
+  }
 }
+
+.chips {
+  display: grid;
+  grid-column: 1 / -1;
+  gap: 1.4rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgb(232 240 239 / 15%);
+}
+
+.chipList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chip {
+  padding: 0.45rem 1.1rem;
+  border: 1px solid rgb(155 201 173 / 35%);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.8rem;
+  transition:
+    color 180ms ease,
+    border-color 180ms ease;
+}
+
+.chip:hover {
+  color: var(--accent);
+  border-color: rgb(155 201 173 / 65%);
+}
+
 
 @media (max-width: 420px) {
   .logos {

@@ -4,6 +4,7 @@ import styles from "@/styles/pages/index.module.css";
 import About from "@/components/main/About";
 import Experience from "@/components/main/Experience";
 import Education from "@/components/main/Education";
+import BeyondCode from "@/components/main/BeyondCode";
 import Projects from "@/components/main/Projects";
 import Skills from "@/components/main/Skills";
 
@@ -25,6 +26,7 @@ export default function Main() {
           <a href="#experience">Experience</a>
           <a href="#skills">Skills</a>
           <a href="#education">Education</a>
+          <a href="#beyond">Beyond Code</a>
           <a href="#projects">Projects</a>
           <a className={styles.resumeLink} href={RESUME_URL} target="_blank" rel="noreferrer">
             Resume <span aria-hidden="true">↗</span>
@@ -37,11 +39,18 @@ export default function Main() {
         <Experience />
         <Skills />
         <Education />
+        <BeyondCode />
         <Projects />
         <footer className={styles.footer} id="contact">
           <div>
-            <span className={styles.eyebrow}>Have a good one in mind?</span>
-            <h2>Let&apos;s make it happen.</h2>
+            <span className={styles.eyebrow}>Open to backend engineer roles</span>
+            <h2>Let&apos;s build something reliable.</h2>
+            <p className={styles.footerLine}>
+              Java · Spring Boot · AWS — with AI if you&apos;ve got it.
+            </p>
+            <p className={styles.availability}>
+              Gurugram/NCR · Remote India · Open abroad
+            </p>
           </div>
           <div className={styles.contactLinks}>
             <a href="mailto:shivam.meert@gmail.com">

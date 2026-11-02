@@ -4,22 +4,15 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 
 import ShivamCutout from "@/assets/images/shivamwithoutbackground.png";
-import ReactLogo from "@/assets/images/logos/reactlogo.png";
-import NextLogo from "@/assets/images/logos/nextjslogo.png";
-import SpringLogo from "@/assets/images/logos/springbootlogo.png";
-import JavaLogo from "@/assets/images/logos/javalogo.png";
-import JSLogo from "@/assets/images/logos/javascriptlogo.png";
 
 import ExperienceYears from "@/components/main/ExperienceYears";
 import styles from "@/styles/components/main/About.module.css";
 
-const tools = [
-  { name: "React", image: ReactLogo },
-  { name: "Next.js", image: NextLogo },
-  { name: "Spring Boot", image: SpringLogo },
-  { name: "Java", image: JavaLogo },
-  { name: "JavaScript", image: JSLogo },
-];
+const RESUME_URL =
+  "https://drive.google.com/uc?export=download&id=19eVENQ0P66nB6qrt7MmEQNvul_j8Q20C";
+const GITHUB_URL = "https://github.com/Shivamgulia";
+
+const careChips = ["Reliability", "Security", "Automation", "Practical AI"];
 
 function About() {
   const [portraitScrollProgress, setPortraitScrollProgress] = useState(0);
@@ -58,22 +51,31 @@ function About() {
     <section className={styles.cont} id="about" aria-labelledby="about-title">
       <div className={styles.intro}>
         <span className={styles.eyebrow}>
-          Software engineer · Gurugram, India
+          SDE2 @ Fidelity International · Gurugram, India · Open to backend
+          &amp; AI-enabled backend roles
         </span>
         <h1 id="about-title">
-          Scalable software,
+          Backend
           <br />
-          <span>built to matter.</span>
+          <span>Engineer.</span>
         </h1>
+        <p className={styles.keywordLine}>Java · Spring Boot · AWS · GenAI</p>
         <p className={styles.summary}>
-          Software engineer with <ExperienceYears /> years of experience since
-          2023, building scalable backend services, cloud-native enterprise
-          applications, and secure RESTful architectures with Java, Spring Boot,
-          and AWS.
+          I build systems that scale — and AI that earns its keep.{" "}
+          <ExperienceYears /> years turning enterprise problems into reliable,
+          production-grade backend systems at Fidelity International.
         </p>
-        <a className={styles.contactLink} href="mailto:shivam.meert@gmail.com">
-          Get in touch <span aria-hidden="true">↗</span>
-        </a>
+        <div className={styles.ctaRow}>
+          <a className={styles.contactLink} href={RESUME_URL} target="_blank" rel="noreferrer">
+            View Resume <span aria-hidden="true">↗</span>
+          </a>
+          <a className={styles.contactLink} href="mailto:shivam.meert@gmail.com">
+            Get in Touch <span aria-hidden="true">↗</span>
+          </a>
+          <a className={styles.contactLink} href={GITHUB_URL} target="_blank" rel="noreferrer">
+            GitHub <span aria-hidden="true">↗</span>
+          </a>
+        </div>
       </div>
 
       <div className={styles.portraitWrap}>
@@ -91,25 +93,38 @@ function About() {
 
       <div className={styles.aboutText}>
         <span className={styles.eyebrow}>A little about me</span>
-        <p>
-          I build event-driven microservices, improve administrative workflows,
-          and bring Retrieval-Augmented Generation and generative AI into
-          practical products. My work has supported compliance insights across
-          700+ cloud accounts and helped teams work more efficiently.
-        </p>
+        <div className={styles.aboutBody}>
+          <p className={styles.aboutLead}>
+            I&apos;m a backend engineer turning complex enterprise problems into
+            reliable, production-grade systems. At Fidelity International,
+            I&apos;ve built event-driven microservices tracking IaaS compliance
+            across 700+ cloud accounts, and shipped AI-assisted automation
+            saving analysts 40+ hours a month.
+          </p>
+          <p>
+            My core stack is Java, Spring Boot, and AWS — but what sets my work
+            apart is the AI layer: I&apos;ve built RAG pipelines, vector search,
+            and agent frameworks into products in daily use, from document Q&amp;A
+            platforms to text-to-SQL tools.
+          </p>
+          <p>
+            I care about three things: correctness under load, security by
+            default, and cutting busywork. Off the clock, I run a self-hosted
+            home server and grind LeetCode in Java (236 problems and counting).
+          </p>
+        </div>
       </div>
 
-      {/* <div className={styles.toolkit} aria-label="Technologies I work with">
-        <span className={styles.eyebrow}>Tools of the trade</span>
-        <div className={styles.logos}>
-          {tools.map(({ name, image }) => (
-            <div className={styles.tool} key={name}>
-              <Image alt="" src={image} className={styles.logoImage} />
-              <span>{name}</span>
-            </div>
+      <div className={styles.chips} aria-label="What I care about">
+        <span className={styles.eyebrow}>What I care about</span>
+        <ul className={styles.chipList}>
+          {careChips.map((chip) => (
+            <li className={styles.chip} key={chip}>
+              {chip}
+            </li>
           ))}
-        </div>
-      </div> */}
+        </ul>
+      </div>
     </section>
   );
 }

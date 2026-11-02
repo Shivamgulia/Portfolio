@@ -90,6 +90,19 @@
   letter-spacing: -0.055em;
 }
 
+.footerLine {
+  margin-top: 1.4rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.availability {
+  margin-top: 0.5rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+}
+
 .contactLinks {
   display: grid;
   width: 100%;
